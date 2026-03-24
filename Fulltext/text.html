@@ -1,0 +1,169 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edward Yang: Digital Edition</title>
+        <style>
+            body { font-family: 'Georgia', serif; line-height: 1.8; color: #333; background-color: #f4f6f7; padding: 20px; }
+            .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #2c3e50; }
+            
+            /* Metadata Section Styling (Responsive) */
+            .metadata-box { display: flex; flex-wrap: wrap; background-color: #fafbfc; border: 1px solid #eee; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
+            .metadata-item { flex: 1; min-width: 250px; padding: 10px 20px; }
+            .metadata-item h2 { font-size: 1.2em; color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 0; }
+            .metadata-item ul { list-style: none; padding: 0; margin: 0; }
+            .metadata-item li { margin-bottom: 8px; font-size: 0.9em; }
+            .metadata-label { font-weight: bold; color: #555; }
+
+            h1 { text-align: center; color: #2c3e50; margin-top: 0; }
+            
+            /* 2. 文字自适应对齐 */
+            p { margin-bottom: 20px; text-align: justify; }
+            
+            a.entity { text-decoration: none; font-weight: bold; padding: 2px 4px; border-radius: 3px; transition: background-color 0.3s; }
+            
+            /* 3. 人物保留蓝色 */
+            .person { color: #2980b9; } .person:hover { background-color: #ebf5fb; }
+            
+            /* 3. 电影保留紫色斜体 */
+            .movie { color: #8e44ad; font-style: italic; } .movie:hover { background-color: #f4ecf7; }
+            
+            /* 3. 其他所有misc实体（地名、机构、概念）统一灰色并使用虚线下划线 */
+            .misc { color: #7f8c8d; border-bottom: 1px dashed #7f8c8d; } .misc:hover { background-color: #f4f6f7; } 
+
+            /* 4. 保留引用样式 */
+            .quote { font-style: italic; color: #555; background-color: #f9f9f9; padding: 2px 6px; border-radius: 4px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="metadata-box">
+                <div class="metadata-item">
+                    <h2>Source Document Info</h2>
+                    <ul>
+                        <li><span class="metadata-label">Chapter Title:</span> Poetry and Motion</li>
+                        <li><span class="metadata-label">Book Title:</span> Edward Yang (Contemporary Film Directors)</li>
+                        <li><span class="metadata-label">Author:</span> John Anderson</li>
+                        <li><span class="metadata-label">Publisher:</span> University of Illinois Press, 2005</li>
+                        <li><span class="metadata-label">ISBN:</span> 978-0252072369</li>
+                    </ul>
+                </div>
+                <div class="metadata-item">
+                    <h2>DH Project Info</h2>
+                    <ul>
+                        <li><span class="metadata-label">Project Name:</span> Maverick Engineer LOD Project</li>
+                        <li><span class="metadata-label">Digital Editor:</span> Xinyi Guo</li>
+                        <li><span class="metadata-label">Publication Date:</span> March 2026</li>
+                        <li><span class="metadata-label">Institution:</span> Maverick Engineer LOD Project</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h1>Edward Yang: Poetry and Motion</h1>
+            <p style="text-align: center; color: #7f8c8d; font-style: italic; margin-top: -10px;">A Digital TEI Edition extracted from John Anderson (2005)</p>
+            
+<div n="1" subtype="chapter" type="selection">
+<head rend="center">SELECTIONS FROM CHAPTER 1: POETRY AND MOTION</head>
+<p>
+<a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a>'s view of his own work has been far more restrained. 
+                    <span class="quote">“I tried to get everything as average as possible,”</span> he said with characteristic understatement,  
+                    not long after the film had played the <a class="entity misc" href="https://www.wikidata.org/wiki/Q1089696" target="_blank">2000 Cannes Film Festival</a> 
+                    and he was awarded the prize for Best Director. <span class="quote">“Not too much, not too little, right down the center of 
+                    the court,because that's what is most universal. It will touch more people that way. And, actually, it's more dramatic”</span>  
+                    (qtd. in Johnston).
+                </p>
+<p>
+<span class="quote">“When you make a film like this,”</span> he told another interviewer, <span class="quote">“it's like writing a very intimate 
+                    letter to a very good friend. The movie's success is not something that boosts my ego. But that there are so 
+                    many friends in the world who understand you--that's a comfortable feeling”</span> (qtd. in Johnston).
+                </p>
+<p>
+                    Comfortable for <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a>, perhaps, but the overarching effect of his  
+                    films is as far from solace as the feel-good ethos of current <a class="entity misc" href="https://www.wikidata.org/wiki/Q34006" target="_blank" title="View Authority Record">Hollywood</a> is  
+                    from the blunt-edged humanity of <a class="entity person" href="https://www.wikidata.org/wiki/Q50713" target="_blank" title="View Authority Record">Jean Renoir</a>. All of <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a>'s  
+                    films are disquieting, albeit in their own distinct ways. The silent solitude of <a class="entity movie" href="https://www.imdb.com/title/tt0085626/" target="_blank" title="View Authority Record">Expectations</a> (1982), the spiritual  
+                    slipperiness of <a class="entity movie" href="https://www.imdb.com/title/tt0085635/" target="_blank" title="View Authority Record">That Day, on the Beach</a> (1983), the existential dread of <a class="entity movie" href="https://www.imdb.com/title/tt0091355/" target="_blank" title="View Authority Record">The Terrorizer</a> (1986), 
+                    and the interpersonal dysfunction of <a class="entity movie" href="https://www.imdb.com/title/tt0109685/" target="_blank" title="View Authority Record">A Confucian Confusion</a> (1994) and <a class="entity movie" href="https://www.imdb.com/title/tt0116962/" target="_blank" title="View Authority Record">Mahjong</a> 
+                    (1996) are all intended to rock audiences out of their popcorn-nourished complacency and into a new awareness of their world and its possibilities.
+                </p>
+<p>
+                    These films are not the stuff of record-shattering box office, nor have they had global exposure, as one can tell  
+                    from <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a>'s record with <a class="entity misc" href="https://www.wikidata.org/wiki/Q30" target="_blank" title="View Authority Record">U.S.</a> distributors. 
+                    But mass acceptance has never been a barometer of artistic importance. It certainly has not been in the case of <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Edward Yang</a>.
+                </p>
+<p>
+                    That his films have had trouble even in <a class="entity misc" href="https://www.geonames.org/1668284" target="_blank" title="View Authority Record">Taiwan</a> is an example of what happens to 
+                    agents provocateurs on the field of mass entertainment. The principals of the 
+<a class="entity misc" href="https://www.wikidata.org/wiki/Q701625" target="_blank">Taiwanese New Wave</a> were, of course, 
+<a class="entity misc" href="https://www.wikidata.org/wiki/Q48" target="_blank">Asian</a> film-makers, who were influenced by the 
+<a class="entity misc" href="https://www.wikidata.org/wiki/Q167776" target="_blank">Italian neo-realists</a>--who inspired the  
+                    realism that separates the younger Taiwanese directors from their predecessors-- and impelled not only by artistic  
+                    hunger but by a need to explore the singular experience of life on <a class="entity misc" href="https://www.geonames.org/1668284" target="_blank" title="View Authority Record">Taiwan</a>.  
+                    With his debut feature, <a class="entity movie" href="https://www.imdb.com/title/tt0085635/" target="_blank" title="View Authority Record">That Day, on the Beach</a>, and his landmark <a class="entity movie" href="https://www.imdb.com/title/tt0089866/" target="_blank" title="View Authority Record">Taipei Story</a> (1985), 
+<a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> presented modern Taiwanese audiences with something they had not been shown: themselves.
+                </p>
+<p>
+                    With the propulsively dramatic, psychologically ruinous <a class="entity movie" href="https://www.imdb.com/title/tt0101985/" target="_blank" title="View Authority Record">A Brighter Summer Day</a> 
+                    (1991), <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a>'s vision crystallized. <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> 
+                    bookended the nineties with <a class="entity movie" href="https://www.imdb.com/title/tt0101985/" target="_blank" title="View Authority Record">A Brighter Summer Day</a> and <a class="entity movie" href="https://www.imdb.com/title/tt0244316/" target="_blank" title="View Authority Record">Yi Yi</a>,  
+                    achieving with the latter film a kind of synthesis of his own disparate tensions and the full realization of his <a class="entity person" href="https://www.wikidata.org/wiki/Q7243" target="_blank" title="View Authority Record">Tolstoy</a>-esque talents 
+                    as a storyteller.
+                </p>
+<p>
+                    The patchwork culture of Taiwanese society, its lack of a traditionally solid foundation, and its seduction by the economic bull  
+                    markets of the nineties have been consistent themes for <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> over the last decade.  
+<a class="entity movie" href="https://www.imdb.com/title/tt0109685/" target="_blank" title="View Authority Record">A Confucian Confusion</a> (1994) is an aptly titled omnibus of unhappy characters romantically  
+                    involved with the wrong people for the wrong reasons, mostly money, which <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> sees as 
+<a class="entity misc" href="https://www.geonames.org/1668341" target="_blank" title="View Authority Record">Taipei</a>'s chief pollutant and major religion. <a class="entity movie" href="https://www.imdb.com/title/tt0116962/" target="_blank" title="View Authority Record">Mahjong</a> (1996) 
+                    was similarly obsessed with the <a class="entity misc" href="https://www.wikidata.org/wiki/Q7081" target="_blank" title="View Authority Record">materialism</a> of <a class="entity misc" href="https://www.geonames.org/1668341" target="_blank" title="View Authority Record">Taipei</a>.  
+                    These two films are often seen, thematically, as a pair, just as <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a>'s "urban trilogy" serves as 
+                    a medley of <a class="entity misc" href="https://www.wikidata.org/wiki/Q545825" target="_blank" title="View Authority Record">alienation</a>.
+                </p>
+<gap extent="several paragraphs" reason="omitted"/>
+<p>
+                    Born in <a class="entity misc" href="https://www.geonames.org/1796236" target="_blank" title="View Authority Record">Shanghai</a> in <date when="1947">1947</date>, <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> was taken to 
+<a class="entity misc" href="https://www.geonames.org/1668284" target="_blank" title="View Authority Record">Taiwan</a> by his family in 1949, after <a class="entity person" href="https://www.wikidata.org/wiki/Q5816" target="_blank" title="View Authority Record">Mao Zedong</a> 
+                    took over the mainland and the <a class="entity misc" href="https://www.wikidata.org/wiki/Q31113" target="_blank" title="View Authority Record">Nationalists</a> hit the rowboats. Growing up 
+                    in the fifties and sixties, he was among his country's first postwar generation and thus a product of a society (and a  
+                    government-encouraged ethos) that stressed the study of science and math to the exclusion of the arts—at least as 
+                    a pursuit for respectable people.
+                </p>
+<p>
+<span class="quote">“I used to enjoy drawing comics when I was a kid,”</span> <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> once said, but as 
+                    he explains in an interview elsewhere in this book, cultural matters or, for that 
+                    matter, <span class="quote">“anything that improves people's intelligence,”</span> was denigrated on 
+<a class="entity misc" href="https://www.geonames.org/1668284" target="_blank" title="View Authority Record">Taiwan</a>. Young people who could find the strength to resist the status quo 
+                    and follow an artistic path were few, and they had to have been particularly courageous.
+                </p>
+<p>
+                    The young <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Edward Yang</a> was not. As he freely admits, <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a>  
+<span class="quote">“gave in,”</span> forsaking his first career choice, <a class="entity misc" href="https://www.wikidata.org/wiki/Q12271" target="_blank">architecture</a>—which he  
+                    had imagined as a discipline that could reconcile the creative with the technical—and opting instead for a degree in electrical engineering. (He was compelled,  
+                    he has said, to be <span class="quote">“a good Chinese son.”</span>) This led to a move to the <a class="entity misc" href="https://www.wikidata.org/wiki/Q30" target="_blank" title="View Authority Record">United States</a>, where he received a masters 
+                    degree in computer design at the <a class="entity misc" href="https://www.wikidata.org/wiki/Q501758" target="_blank" title="View Authority Record">University of Florida</a>, after which he went west, enrolling for just a year in the film program at 
+                    the <a class="entity misc" href="https://www.wikidata.org/wiki/Q4614" target="_blank" title="View Authority Record">University of Southern California</a>. (<span class="quote">“It was a disastrous experience: I couldn't do a lot of the things they wanted me to do. 
+                    My ideas about story and characters were so different.”</span>)
+                </p>
+<p>
+<a class="entity movie" href="https://www.imdb.com/title/tt0068182/" target="_blank" title="View Authority Record">Aguirre</a>, one of <a class="entity person" href="https://www.wikidata.org/wiki/Q44131" target="_blank" title="View Authority Record">Werner Herzog</a>'s famously mad 
+                    exercises in excess (other notorious examples are <a class="entity movie" href="https://www.imdb.com/title/tt0083946/" target="_blank" title="View Authority Record">Fitzcarraldo</a> and 
+<a class="entity movie" href="https://www.imdb.com/title/tt0079641/" target="_blank" title="View Authority Record">Nosferatu</a>, all three starring <a class="entity person" href="https://www.wikidata.org/wiki/Q55419" target="_blank" title="View Authority Record">Klaus Kinski</a>), is about an insane 
+                    conquistador in search of gold in the <a class="entity misc" href="#">Incan Amazon</a>. <span class="quote">“Basically it's
+                    not the style or the beauty of the images that influenced me,”</span> <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> 
+                    recalled, tellingly. <span class="quote">“It was the spirit of the filmmaking of Mr. Herzog
+                    that was never before seen.”</span>
+</p>
+<p>
+                    Deciding, on a wave of <a class="entity person" href="https://www.wikidata.org/wiki/Q44131" target="_blank" title="View Authority Record">Herzog</a>/<a class="entity person" href="https://www.wikidata.org/wiki/Q55419" target="_blank" title="View Authority Record">Kinski</a>-inspired determination that 
+<span class="quote">“I had to do something I liked before I got real old,”</span> <a class="entity person" href="https://www.wikidata.org/wiki/Q716700" target="_blank" title="View Authority Record">Yang</a> returned to 
+<a class="entity misc" href="https://www.geonames.org/1668284" target="_blank" title="View Authority Record">Taiwan</a> in 1981 to pursue a filmmaking career. (Another German,  
+<a class="entity person" href="https://www.wikidata.org/wiki/Q44426" target="_blank" title="View Authority Record">Rainer Werner Fassbinder</a>, has been cited as a motivating force as well.)
+                </p>
+</div>
+
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema1="http://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_confucian_confusion">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>A Confucian Confusion</schema1:name>
+    <schema1:datePublished>1994</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q2992619"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0109685/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_expectations">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Expectations</schema1:name>
+    <schema1:datePublished>1982</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q39072310"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0085626/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/place_hollywood">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema1:name>Hollywood</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q34006"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_terrorizer">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>The Terrorizer</schema1:name>
+    <schema1:datePublished>1986</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q640531"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0091355/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/place_incan_amazon">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema1:name>Incan Amazon</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_taipei_story">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Taipei Story</schema1:name>
+    <schema1:datePublished>1985</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q3514053"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0089866/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_brighter_summer">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>A Brighter Summer Day</schema1:name>
+    <schema1:datePublished>1991</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q710745"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0101985/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/person_herzog">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema1:name>Werner Herzog</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q44131"/>
+    <schema1:jobTitle>German film director, screenwriter, and author.</schema1:jobTitle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/person_kinski">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema1:name>Klaus Kinski</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q55419"/>
+    <schema1:jobTitle>German actor known for his collaboration with Herzog.</schema1:jobTitle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/person_fassbinder">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema1:name>Rainer Werner Fassbinder</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q44426"/>
+    <schema1:jobTitle>Prominent figure of the New German Cinema.</schema1:jobTitle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/concept_materialism">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Materialism</skos:prefLabel>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q7081"/>
+    <skos:definition>The prioritization of economic gain over spiritual ethics.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/source_book">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Poetry and Motion</schema1:name>
+    <schema1:datePublished>2005</schema1:datePublished>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/org_USC">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <schema1:name>University of Southern California</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q4614"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_mahjong">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Mahjong</schema1:name>
+    <schema1:datePublished>1996</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q3277743"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0116962/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/place_us">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema1:name>United States</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q30"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/concept_alienation">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Alienation</skos:prefLabel>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q545825"/>
+    <skos:definition>The psychological and social isolation of individuals within the urban landscape.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_aguirre">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Aguirre</schema1:name>
+    <schema1:datePublished>1972</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q325662"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0068182/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/place_shanghai">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema1:name>Shanghai</schema1:name>
+    <owl:sameAs rdf:resource="https://www.geonames.org/1796236"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/place_taiwan">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema1:name>Taiwan</schema1:name>
+    <owl:sameAs rdf:resource="https://www.geonames.org/1668284"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/person_mao_zedong">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema1:name>Mao Zedong</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q5816"/>
+    <schema1:jobTitle>Chinese communist revolutionary.</schema1:jobTitle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_nosferatu">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Nosferatu</schema1:name>
+    <schema1:datePublished>1979</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q151895"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0079641/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/person_tolstoy">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema1:name>Leo Tolstoy</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q7243"/>
+    <schema1:jobTitle>Russian writer.</schema1:jobTitle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/org_nationalists">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <schema1:name>Kuomintang (Chinese Nationalists)</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q31113"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_fitzcarraldo">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Fitzcarraldo</schema1:name>
+    <schema1:datePublished>1982</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q698111"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0083946/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/person_jean_renoir">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema1:name>Jean Renoir</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q50713"/>
+    <schema1:jobTitle>French film director.</schema1:jobTitle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_that_day">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>That Day, on the Beach</schema1:name>
+    <schema1:datePublished>1983</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q3519626"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0085635/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/item_yiyi">
+    <rdf:type rdf:resource="http://schema.org/Movie"/>
+    <schema1:name>Yi Yi</schema1:name>
+    <schema1:datePublished>2000</schema1:datePublished>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q704513"/>
+    <schema1:sameAs rdf:resource="https://www.imdb.com/title/tt0244316/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/place_taipei">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema1:name>Taipei</schema1:name>
+    <owl:sameAs rdf:resource="https://www.geonames.org/1668341"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/org_UF">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <schema1:name>University of Florida</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q501758"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/project/edward_yang/person_edward_yang">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema1:name>楊德昌</schema1:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q716700"/>
+    <schema1:jobTitle>Film director; leading figure of Taiwan New Cinema.</schema1:jobTitle>
+  </rdf:Description>
+</rdf:RDF>
