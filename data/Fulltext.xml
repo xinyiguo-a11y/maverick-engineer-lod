@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title><hi rend="italic">Edward Yang: Poetry and Motion</hi>: A Digital TEI Edition</title>
+                <author>
+                    <persName xml:id="author_anderson" sameAs="https://www.wikidata.org/wiki/Q6219000">
+                        <forename>John</forename>
+                        <surname>Anderson</surname>
+                    </persName>
+                </author>
+                <respStmt>
+                    <resp>Digital encoding, semantic modeling, and TEI markup by</resp>
+                    <persName xml:id="editor_student">
+                        <forename>Xinyi</forename>
+                        <surname>Guo</surname>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            
+            <publicationStmt>
+                <publisher>Maverick Engineer LOD Project</publisher>
+                <pubPlace>
+                    <placeName key="Bologna" sameAs="https://www.geonames.org/3181928">Bologna, Italy</placeName>
+                </pubPlace>
+                <date when="2026-03">March 2026</date>
+                <availability status="free">
+                    <p>Open Access</p>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0 International</licence>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl xml:id="source_book">
+                    <title level="a">Poetry and Motion</title> 
+                    <title level="m">Edward Yang (Contemporary Film Directors)</title>
+                    <author ref="#author_anderson">John Anderson</author>
+                    <publisher>University of Illinois Press</publisher>
+                    <date when="2005">2005</date>
+                    <idno type="ISBN">978-0252072369</idno>
+                    <note>This digital edition consists of selected paragraphs from the first chapter.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+            <projectDesc>
+                <p>Created for the "Maverick Engineer" LOD and DH course project.</p>
+            </projectDesc>
+            <samplingDecl>
+                <p>This text contains non-contiguous selected paragraphs from Chapter 1 ("Poetry and Motion") 
+                   of John Anderson's book to highlight the biographical, structural, and conceptual background of Edward Yang.</p>
+            </samplingDecl>
+        </encodingDesc>
+
+        <profileDesc>
+            <particDesc>
+                <listPerson type="mentions">
+                    <head>Global Entities and Authorities Mentioned</head>
+                    <person xml:id="person_edward_yang" sameAs="https://www.wikidata.org/wiki/Q716700">
+                        <persName xml:lang="zh">楊德昌</persName>
+                        <persName xml:lang="en">Edward Yang</persName>
+                        <occupation>Film director; leading figure of Taiwan New Cinema.</occupation>
+                    </person>
+                    <person xml:id="person_herzog" sameAs="https://www.wikidata.org/wiki/Q44131">
+                        <persName>Werner Herzog</persName>
+                        <occupation>German film director, screenwriter, and author.</occupation>
+                    </person>
+                    <person xml:id="person_kinski" sameAs="https://www.wikidata.org/wiki/Q55419">
+                        <persName>Klaus Kinski</persName>
+                        <occupation>German actor known for his collaboration with Herzog.</occupation>
+                    </person>
+                    <person xml:id="person_fassbinder" sameAs="https://www.wikidata.org/wiki/Q44426">
+                        <persName>Rainer Werner Fassbinder</persName>
+                        <occupation>Prominent figure of the New German Cinema.</occupation>
+                    </person>
+                    <person xml:id="person_jean_renoir" sameAs="https://www.wikidata.org/wiki/Q50713">
+                        <persName>Jean Renoir</persName>
+                        <occupation>French film director.</occupation>
+                    </person>
+                    <person xml:id="person_tolstoy" sameAs="https://www.wikidata.org/wiki/Q7243">
+                        <persName>Leo Tolstoy</persName>
+                        <occupation>Russian writer.</occupation>
+                    </person>
+                    <person xml:id="person_mao_zedong" sameAs="https://www.wikidata.org/wiki/Q5816">
+                        <persName>Mao Zedong</persName>
+                        <occupation>Chinese communist revolutionary.</occupation>
+                    </person>
+                </listPerson>
+
+                <listOrg>
+                    <org xml:id="org_nationalists" sameAs="https://www.wikidata.org/wiki/Q31113">
+                        <orgName>Kuomintang (Chinese Nationalists)</orgName>
+                    </org>
+                    <org xml:id="org_UF" sameAs="https://www.wikidata.org/wiki/Q501758">
+                        <orgName>University of Florida</orgName>
+                    </org>
+                    <org xml:id="org_USC" sameAs="https://www.wikidata.org/wiki/Q4614">
+                        <orgName>University of Southern California</orgName>
+                    </org>
+                </listOrg>
+                
+                <listPlace>
+                    <place xml:id="place_taiwan" sameAs="https://www.geonames.org/1668284">
+                        <placeName>Taiwan</placeName>
+                    </place>
+                    <place xml:id="place_taipei" sameAs="https://www.geonames.org/1668341">
+                        <placeName>Taipei</placeName>
+                    </place>
+                    <place xml:id="place_shanghai" sameAs="https://www.geonames.org/1796236">
+                        <placeName>Shanghai</placeName>
+                    </place>
+                    <place xml:id="place_hollywood" sameAs="https://www.wikidata.org/wiki/Q34006">
+                        <placeName>Hollywood</placeName>
+                    </place>
+                    <place xml:id="place_us" sameAs="https://www.wikidata.org/wiki/Q30">
+                        <placeName>United States</placeName>
+                    </place>
+                    <place xml:id="place_incan_amazon">
+                        <placeName>Incan Amazon</placeName>
+                        <note>A rhetorical and historical conflation by the author referring to the Andes-Amazon 
+                        transition zone explored by Spanish conquistadors in Herzog's film. </note>
+                    </place>
+                </listPlace>
+            </particDesc>
+
+            <textClass>
+                <keywords scheme="http://id.loc.gov/authorities/subjects">
+                    <term xml:id="concept_alienation" sameAs="https://www.wikidata.org/wiki/Q545825">
+                        <term xml:lang="en">Alienation</term>
+                        <term xml:lang="zh">异化</term>
+                        <note>The psychological and social isolation of individuals within the urban landscape.</note>
+                    </term>
+                    <term xml:id="concept_materialism" sameAs="https://www.wikidata.org/wiki/Q7081">
+                        <term xml:lang="en">Materialism</term>
+                        <term xml:lang="zh">物质主义</term>
+                        <note>The prioritization of economic gain over spiritual ethics.</note>
+                    </term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        
+        <sourceDesc>
+            <listBibl>
+                <head>Films Mentioned in the Text</head>
+                <bibl xml:id="item_expectations" sameAs="https://www.wikidata.org/wiki/Q39072310">
+                    <title>Expectations</title>
+                    <date>1982</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0085626/</idno>
+                </bibl>
+                <bibl xml:id="item_that_day" sameAs="https://www.wikidata.org/wiki/Q3519626">
+                    <title>That Day, on the Beach</title>
+                    <date>1983</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0085635/</idno>
+                </bibl>
+                <bibl xml:id="item_taipei_story" sameAs="https://www.wikidata.org/wiki/Q3514053">
+                    <title>Taipei Story</title>
+                    <date>1985</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0089866/</idno>
+                </bibl>
+                <bibl xml:id="item_terrorizer" sameAs="https://www.wikidata.org/wiki/Q640531">
+                    <title>The Terrorizer</title>
+                    <date>1986</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0091355/</idno>
+                </bibl>
+                <bibl xml:id="item_brighter_summer" sameAs="https://www.wikidata.org/wiki/Q710745">
+                    <title>A Brighter Summer Day</title>
+                    <date>1991</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0101985/</idno>
+                </bibl>
+                <bibl xml:id="item_confucian_confusion" sameAs="https://www.wikidata.org/wiki/Q2992619">
+                    <title>A Confucian Confusion</title>
+                    <date>1994</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0109685/</idno>
+                </bibl>
+                <bibl xml:id="item_mahjong" sameAs="https://www.wikidata.org/wiki/Q3277743">
+                    <title>Mahjong</title>
+                    <date>1996</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0116962/</idno>
+                </bibl>
+                <bibl xml:id="item_yiyi" sameAs="https://www.wikidata.org/wiki/Q704513">
+                    <title>Yi Yi</title>
+                    <date>2000</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0244316/</idno>
+                </bibl>
+                <bibl xml:id="item_aguirre" sameAs="https://www.wikidata.org/wiki/Q325662">
+                    <title>Aguirre</title>
+                    <date>1972</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0068182/</idno>
+                </bibl>
+                <bibl xml:id="item_fitzcarraldo" sameAs="https://www.wikidata.org/wiki/Q698111">
+                    <title>Fitzcarraldo</title>
+                    <date>1982</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0083946/</idno>
+                </bibl>
+                <bibl xml:id="item_nosferatu" sameAs="https://www.wikidata.org/wiki/Q151895">
+                    <title>Nosferatu</title>
+                    <date>1979</date>
+                    <idno type="IMDb">https://www.imdb.com/title/tt0079641/</idno>
+                </bibl>
+            </listBibl>
+        </sourceDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div type="selection" n="1" subtype="chapter">
+                <head rend="center">SELECTIONS FROM CHAPTER 1: POETRY AND MOTION</head>
+                
+                <p>
+                    <persName ref="#person_edward_yang">Yang</persName>'s view of his own work has been far more restrained. 
+                    <q>“I tried to get everything as average as possible,”</q> he said with characteristic understatement, <lb/>
+                    not long after the film had played the <name type="event" sameAs="https://www.wikidata.org/wiki/Q1089696">2000 Cannes Film Festival</name> 
+                    and he was awarded the prize for Best Director. <q>“Not too much, not too little, right down the center of <lb/>
+                    the court,because that's what is most universal. It will touch more people that way. And, actually, it's more dramatic”</q> <lb/>
+                    (qtd. in Johnston).
+                </p>
+
+                <p>
+                    <q>“When you make a film like this,”</q> he told another interviewer, <q>“it's like writing a very intimate <lb/>
+                    letter to a very good friend. The movie's success is not something that boosts my ego. But that there are so <lb/>
+                    many friends in the world who understand you--that's a comfortable feeling”</q> (qtd. in Johnston).
+                </p>
+
+                <p>
+                    Comfortable for <persName ref="#person_edward_yang">Yang</persName>, perhaps, but the overarching effect of his <lb/>
+                    films is as far from solace as the feel-good ethos of current <placeName ref="#place_hollywood">Hollywood</placeName> is<lb/> 
+                    from the blunt-edged humanity of <persName ref="#person_jean_renoir">Jean Renoir</persName>. All of <persName ref="#person_edward_yang">Yang</persName>'s <lb/>
+                    films are disquieting, albeit in their own distinct ways. The silent solitude of <title ref="#item_expectations">Expectations</title> (1982), the spiritual <lb/>
+                    slipperiness of <title ref="#item_that_day">That Day, on the Beach</title> (1983), the existential dread of <title ref="#item_terrorizer">The Terrorizer</title> (1986),<lb/>
+                    and the interpersonal dysfunction of <title ref="#item_confucian_confusion">A Confucian Confusion</title> (1994) and <title ref="#item_mahjong">Mahjong</title><lb/>
+                    (1996) are all intended to rock audiences out of their popcorn-nourished complacency and into a new awareness of their world and its possibilities.
+                </p>
+
+                <p>
+                    These films are not the stuff of record-shattering box office, nor have they had global exposure, as one can tell <lb/>
+                    from <persName ref="#person_edward_yang">Yang</persName>'s record with <placeName ref="#place_us">U.S.</placeName> distributors.<lb/>
+                    But mass acceptance has never been a barometer of artistic importance. It certainly has not been in the case of <persName ref="#person_edward_yang">Edward Yang</persName>.
+                </p>
+
+                <p>
+                    That his films have had trouble even in <placeName ref="#place_taiwan">Taiwan</placeName> is an example of what happens to<lb/>
+                    agents provocateurs on the field of mass entertainment. The principals of the<lb/>
+                    <term type="movement" sameAs="https://www.wikidata.org/wiki/Q701625">Taiwanese New Wave</term> were, of course,<lb/>
+                    <placeName sameAs="https://www.wikidata.org/wiki/Q48">Asian</placeName> film-makers, who were influenced by the<lb/>
+                    <name type="movement" sameAs="https://www.wikidata.org/wiki/Q167776">Italian neo-realists</name>--who inspired the <lb/>
+                    realism that separates the younger Taiwanese directors from their predecessors-- and impelled not only by artistic <lb/>
+                    hunger but by a need to explore the singular experience of life on <placeName ref="#place_taiwan">Taiwan</placeName>. <lb/>
+                    With his debut feature, <title ref="#item_that_day">That Day, on the Beach</title>, and his landmark <title ref="#item_taipei_story">Taipei Story</title> (1985),<lb/>
+                    <persName ref="#person_edward_yang">Yang</persName> presented modern Taiwanese audiences with something they had not been shown: themselves.
+                </p>
+
+                <p>
+                    With the propulsively dramatic, psychologically ruinous <title ref="#item_brighter_summer">A Brighter Summer Day</title><lb/>
+                    (1991), <persName ref="#person_edward_yang">Yang</persName>'s vision crystallized. <persName ref="#person_edward_yang">Yang</persName><lb/>
+                    bookended the nineties with <title ref="#item_brighter_summer">A Brighter Summer Day</title> and <title ref="#item_yiyi">Yi Yi</title>, <lb/>
+                    achieving with the latter film a kind of synthesis of his own disparate tensions and the full realization of his <persName ref="#person_tolstoy">Tolstoy</persName>-esque talents<lb/>
+                    as a storyteller.
+                </p>
+
+                <p>
+                    The patchwork culture of Taiwanese society, its lack of a traditionally solid foundation, and its seduction by the economic bull <lb/>
+                    markets of the nineties have been consistent themes for <persName ref="#person_edward_yang">Yang</persName> over the last decade. <lb/>
+                    <title ref="#item_confucian_confusion">A Confucian Confusion</title> (1994) is an aptly titled omnibus of unhappy characters romantically <lb/>
+                    involved with the wrong people for the wrong reasons, mostly money, which <persName ref="#person_edward_yang">Yang</persName> sees as<lb/>
+                    <placeName ref="#place_taipei">Taipei</placeName>'s chief pollutant and major religion. <title ref="#item_mahjong">Mahjong</title> (1996)<lb/>
+                    was similarly obsessed with the <term ref="#concept_materialism">materialism</term><lb/>of <placeName ref="#place_taipei">Taipei</placeName>. <lb/>
+                    These two films are often seen, thematically, as a pair, just as <persName ref="#person_edward_yang">Yang</persName>'s "urban trilogy" serves as<lb/>
+                    a medley of <term ref="#concept_alienation">alienation</term>.
+                </p>
+                
+                <gap reason="omitted" extent="several paragraphs"/>
+
+                <p>
+                    Born in <placeName ref="#place_shanghai">Shanghai</placeName> in <date when="1947">1947</date>, <persName ref="#person_edward_yang">Yang</persName> was taken to<lb/>
+                    <placeName ref="#place_taiwan">Taiwan</placeName> by his family in 1949, after <persName ref="#person_mao_zedong">Mao Zedong</persName><lb/>
+                    took over the mainland and the <orgName ref="#org_nationalists">Nationalists</orgName> hit the rowboats. Growing up<lb/>
+                    in the fifties and sixties, he was among his country's first postwar generation and thus a product of a society (and a <lb/>
+                    government-encouraged ethos) that stressed the study of science and math to the exclusion of the arts—at least as<lb/>
+                    a pursuit for respectable people.
+                </p>
+
+                <p>
+                    <q>“I used to enjoy drawing comics when I was a kid,”</q> <persName ref="#person_edward_yang">Yang</persName> once said, but as<lb/>
+                    he explains in an interview elsewhere in this book, cultural matters or, for that<lb/>
+                    matter, <q>“anything that improves people's intelligence,”</q> was denigrated on<lb/>
+                    <placeName ref="#place_taiwan">Taiwan</placeName>. Young people who could find the strength to resist the status quo<lb/>
+                    and follow an artistic path were few, and they had to have been particularly courageous.
+                </p>
+
+                <p>
+                    The young <persName ref="#person_edward_yang">Edward Yang</persName> was not. As he freely admits, <persName ref="#person_edward_yang">Yang</persName> <lb/>
+                    <q>“gave in,”</q> forsaking his first career choice, <term type="discipline" sameAs="https://www.wikidata.org/wiki/Q12271">architecture</term>—which he <lb/>
+                    had imagined as a discipline that could reconcile the creative with the technical—and opting instead for a degree in electrical engineering. (He was compelled, <lb/>
+                    he has said, to be <q>“a good Chinese son.”</q>) This led to a move to the <placeName ref="#place_us">United States</placeName>, where he received a masters<lb/>
+                    degree in computer design at the <orgName ref="#org_UF">University of Florida</orgName>, after which he went west, enrolling for just a year in the film program at<lb/>
+                    the <orgName ref="#org_USC">University of Southern California</orgName>. (<q>“It was a disastrous experience: I couldn't do a lot of the things they wanted me to do. <lb/>
+                    My ideas about story and characters were so different.”</q>)
+                </p>
+
+
+                <p>
+                    <title ref="#item_aguirre">Aguirre</title>, one of <persName ref="#person_herzog">Werner Herzog</persName>'s famously mad<lb/>
+                    exercises in excess (other notorious examples are <title ref="#item_fitzcarraldo">Fitzcarraldo</title> and<lb/>
+                    <title ref="#item_nosferatu">Nosferatu</title>, all three starring <persName ref="#person_kinski">Klaus Kinski</persName>), is about an insane<lb/>
+                    conquistador in search of gold in the <placeName ref="#place_incan_amazon">Incan Amazon</placeName>. <q>“Basically it's<lb/>
+                    not the style or the beauty of the images that influenced me,”</q> <persName ref="#person_edward_yang">Yang</persName><lb/>
+                    recalled, tellingly. <q>“It was the spirit of the filmmaking of <persName ref="#person_herzog">Mr. Herzog</persName><lb/>
+                    that was never before seen.”</q>
+                </p>
+
+                <p>
+                    Deciding, on a wave of <persName ref="#person_herzog">Herzog</persName>/<persName ref="#person_kinski">Kinski</persName>-inspired determination that<lb/>
+                    <q>“I had to do something I liked before I got real old,”</q> <persName ref="#person_edward_yang">Yang</persName> returned to<lb/>
+                    <placeName ref="#place_taiwan">Taiwan</placeName> in 1981 to pursue a filmmaking career. (Another German, <lb/>
+                    <persName ref="#person_fassbinder">Rainer Werner Fassbinder</persName>, has been cited as a motivating force as well.)
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>
