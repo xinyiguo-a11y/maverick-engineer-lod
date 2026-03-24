@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Yang: Digital Humanities Project</title>
+    <link rel="stylesheet" href="/maverick-engineer-lod/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Oswald:wght@500&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader-text-box">
+            <p class="quote-en">"If feelings can be faked, what else in the world is real?"</p>
+            <p class="quote-source">--A Confucian Confusion (1994)</p>
+            <p class="loading-indicator">Loading<span class="dots">......</span></p>
+        </div>
+        <img src="images/loading-icon.jpg" alt="Loading..." class="loading-img">
+    </div>
+
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Maverick Engineer LODLAM</a>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Knowledge Organization</a></li>
+            <li><a href="text.html">Knowledge Representation</a></li> <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero"></div>
+    <main class="content-container">
+        <div class="title-card">
+            <h1>Maverick Engineer</h1>
+            <p class="subtitle">
+                Mapping the cultural impact of Edward Yang: A spatial and semantic digital biography of Taiwan's cinematic rebel through Linked Open Data.
+            </p>
+        </div>
+    </main>
+    <main class="content-container">
+    </main>
+
+<section class="domain-section">
+    <div class="domain-left">
+        <h2>Study of the Domain</h2>
+        <img src="images/edward-yang-portrait.jpg" alt="Portrait of Edward Yang" class="domain-portrait">
+    </div>
+    <div class="domain-right">
+        <p>
+            <strong>Edward Yang </strong>(1947-2007) stands as a monumental figure in global cinema and a pioneering architect of the <strong>Taiwanese New Wave</strong>. Born in Shanghai and raised in <i>Taipei</i>, Yang initially pursued a career in <strong>electrical engineering</strong>, working as a microcomputer software designer in the United States. This rigorous technical background profoundly shaped his analytical approach to filmmaking when he returned to Taiwan in 1981, allowing him to dissect society with the <strong>precision of a scientist</strong> and the <strong>soul of a poet</strong>.
+        </p>
+        <p>
+            Through masterpieces like <i>Taipei Story (1985)</i> and <i>A Brighter Summer Day (1991)</i>, Yang established his signature auteur style. His lens was uniquely focused on the <strong>rapid modernization of urban spaces</strong>, capturing the alienation, moral ambiguity, and shifting human connections within late 20th-century Taipei. Renowned for his uncompromising artistic vision and meticulous visual composition, Yang remains a vital subject for <strong>mapping the intersection of urban geography and cinematic narrative</strong>.
+        </p>
+    </div>
+</section>
+
+<section class="project-section">
+    
+    <h2 class="project-heading">Our Project</h2>
+    <p>
+        This project reconstructs the intricate <strong>semantic and spatial networks</strong> of Edward Yang's cinematic universe. We specifically focus on his <strong>fiercely independent era</strong>—a period defined by his <strong>bold stylistic experiments</strong> outside the traditional studio system. As Taiwan's ultimate "<strong>cinematic rebel</strong>," Yang's later career represents an uncompromising resistance against commercialism. Our project aims to map and formalize this very <strong>spirit of artistic defiance</strong>.
+    </p>
+    <p>
+        Through <strong>Linked Open Data (LOD)</strong> methodologies, we transform unstructured archival materials and film analyses into a <strong>dynamic knowledge graph</strong>. By interconnecting the <strong>characters, urban geographies, and thematic motifs</strong> that define his narratives, we leverage the <strong>Semantic Web</strong> to make his complex <strong>auteur signature</strong> both machine-readable and universally accessible. 
+    </p>
+</section>
+
+<section class="quote-section">
+    <div class="quote-container">
+        <p class="quote-text">
+            "I make films because I want to express my anger. <br>If I'm not angry, I don't make films."
+        </p>
+        <p class="quote-author">— Edward Yang</p>
+    </div>
+</section>
+
+<section class="items-section">
+    
+    <h2 class="section-main-title">• ITEMS •</h2>
+
+    <div class="items-container">
+        
+        <div class="comic-grid">
+            <div class="panel p1" onclick="showDetail(1)"><img src="images/item1_big.jpg"><div class="panel-label">01</div></div>
+            <div class="panel p2" onclick="showDetail(2)"><img src="images/item2_big.jpg"><div class="panel-label">02</div></div>
+            <div class="panel p3" onclick="showDetail(3)"><img src="images/item3_big.jpg"><div class="panel-label">03</div></div>
+            <div class="panel p4" onclick="showDetail(4)"><img src="images/item4_big.jpg"><div class="panel-label">04</div></div>
+            <div class="panel p5" onclick="showDetail(5)"><img src="images/item5_big.jpg"><div class="panel-label">05</div></div>
+            <div class="panel p6" onclick="showDetail(6)"><img src="images/item6_big.jpeg"><div class="panel-label">06</div></div>
+            <div class="panel p7" onclick="showDetail(7)"><img src="images/item7_big.jpg"><div class="panel-label">07</div></div>
+            <div class="panel p8" onclick="showDetail(8)"><img src="images/item8_big.jpg"><div class="panel-label">08</div></div>
+            <div class="panel p9" onclick="showDetail(9)"><img src="images/item9_big.jpeg"><div class="panel-label">09</div></div>
+            <div class="panel p10" onclick="showDetail(10)"><img src="images/item10_big.png"><div class="panel-label">10</div></div>
+        </div>
+
+        <div class="details-panel" id="details-view">
+            <div class="details-content">
+                <div class="details-main-info">
+                    <h2 id="item-title">Select an item</h2>
+                    
+                    <div class="item-main-img-container" onclick="openModal()" title="Click to enlarge">
+                        <img id="item-img" src="images/placeholder.jpg" alt="Select an item">
+                    </div>
+                    
+                    <div class="metadata-box">
+                        <p><strong>Category:</strong> <span id="item-category">-</span></p>
+                    </div>
+                    
+                    <p id="item-desc" class="item-description">
+                        Click on the comic panels to the left to see the metadata and description of Edward Yang's cinematic artifacts.
+                    </p>
+                </div>
+        
+                <div class="item-actions">
+                    <a id="item-source-link" href="#" target="_blank" class="source-link">Visit the original source ↗</a>
+                    <a id="item-csv-btn" href="#" download class="csv-download-btn">Download CSV File ↓</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="metadata-section alt-bg">
+    <h2 class="section-main-title">• METADATA ANALYSIS • </h2>
+
+    <div class="metadata-container">
+        <p class="metadata-description">
+            To construct a cohesive knowledge graph of Edward Yang's cinematic universe, we sourced diverse cultural heritage items from various galleries, libraries, archives, and museums (GLAM). As these institutions employ heterogeneous data structures—ranging from highly structured academic schemas to localized informal tags—a rigorous metadata alignment was required. In this phase, we analyzed the original metadata standards provided by the holding institutions and mapped them into a unified, standardized vocabulary to ensure semantic interoperability across the Linked Open Data (LOD) network.
+        </p>
+
+        <div class="table-wrapper">
+            <table class="metadata-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Item Type</th>
+                        <th>Institution</th>
+                        <th>Metadata Standard Provided by the Institution</th>
+                        <th>Chosen Metadata</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1987 Taiwan Cinema Manifesto</td>
+                        <td>Manuscript</td>
+                        <td>Wenxin Magazine / China Times</td>
+                        <td>-</td>
+                        <td>Schema.org / Dublin Core (DC) / RDF</td>
+                    </tr>
+                    <tr>
+                        <td>Atom Films</td>
+                        <td>Organization</td>
+                        <td>Taiwan Administration of Commerce</td>
+                        <td>PDF</td>
+                        <td>Schema.org / Dublin Core (DC)/ RDF</td>
+                    </tr>
+                    <tr>
+                        <td>Astro Boy: The Brave in Space</td>
+                        <td>Animation</td>
+                        <td>Tezuka Osamu Official</td>
+                        <td>-</td>
+                        <td>Schema.org / Dublin Core (DC)</td>
+                    </tr>
+                    <tr>
+                        <td>Map of Streets in Taipei City under Direct Jurisdiction</td>
+                        <td>Map</td>
+                        <td>Internet Archive</td>
+                        <td>Dublin Core</td>
+                        <td>Dublin Core (DC)</td>
+                    </tr>
+                    <tr>
+                        <td>A Confucian Confusion</td>
+                        <td>Moving Image</td>
+                        <td>IMDb</td>
+                        <td>-</td>
+                        <td>Schema.org / Dublin Core (DC) / RDF</td>
+                    </tr>
+                    <tr>
+                        <td>The Analects</td>
+                        <td>Book</td>
+                        <td>Internet Archive</td>
+                        <td>Dublin Core / MARC 21</td>
+                        <td>Schema.org / Dublin Core (DC) / RDF</td>
+                    </tr>
+                    <tr>
+                        <td>John R. Benton Hall</td>
+                        <td>Building</td>
+                        <td>University of Florida</td>
+                        <td>-</td>
+                        <td>Schema.org / Dublin Core (DC)</td>
+                    </tr>
+                    <tr>
+                        <td>Stage photo of 'Journey to the East 97 Beijing, Hong Kong, Taipei'</td>
+                        <td>Social documentary photography</td>
+                        <td>Getty Images</td>
+                        <td>IPTC/XMP*</td>
+                        <td>Schema.org / RDF</td>
+                    </tr>
+                    <tr>
+                        <td>Yi Yi: A One and a Two</td>
+                        <td>Moving Image</td>
+                        <td>Festival de Cannes</td>
+                        <td>Schema.org / Open Graph</td>
+                        <td>Schema.org / Dublin Core (DC)</td>
+                    </tr>
+                    <tr>
+                        <td>Edward Yang (Contemporary Film Directors)</td>
+                        <td>Biography</td>
+                        <td>Internet Archive</td>
+                        <td>Dublin Core / MARC 21</td>
+                        <td>Schema.org / Dublin Core (DC)</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+    <h2 class="section-main-title">• KNOWLEDGE ORGANIZATION •</h2>
+
+<section class="model-section" style="max-width: 1050px; margin: 0 auto 100px; padding: 0 40px; text-align: left;">
+    
+    <h3 style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px; color: #080808;">
+        Theoretical Model
+    </h3>
+
+    <p style="font-family: 'Work Sans', 'Georgia', serif; font-size: 1.05em; line-height: 1.8; color: #444; margin-bottom: 40px; text-align: justify;">
+        After identifying the data descriptions, we depicted the items in natural language within a graphic model, reusing the descriptions provided by the institution holding the items. We added relevant information and interlinked the relationships between the items to create a narrative for our study domain, aiming to enrich the data with an interpretative layer. To ensure the unique identification of our entities, we aligned them with authoritative records and well-established knowledge repositories on the web. We used these standards to connect to our data: <strong>VIAF</strong>, <strong>GeoNames</strong>, the <strong>Getty vocabularies</strong> and <strong>Wikidata</strong>. We created this theoretical model answering the questions: <strong>Who, Where, When, and What</strong> for each item.
+    </p>
+    <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVGtEM8xU=/?embedMode=view_only_without_ui&moveToViewport=668,-2023,2483,1493&embedId=603221991971" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+    
+    <h3 style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px; color: #030303;">
+        Conceptual Model
+    </h3>
+
+    <p style="font-family: 'Work Sans', 'Georgia', serif; font-size: 1.05em; line-height: 1.8; color: #444; margin-bottom: 40px; text-align: justify;">
+        After identifying the data descriptions, we depicted the items in natural language within a graphic model, reusing the descriptions provided by the institution holding the items. We added relevant information and interlinked the relationships between the items to create a narrative for our study domain, aiming to enrich the data with an interpretative layer. To ensure the unique identification of our entities, we aligned them with authoritative records and well-established knowledge repositories on the web. We used these standards to connect to our data: <strong>VIAF</strong>, <strong>GeoNames</strong>, the <strong>Getty vocabularies</strong> and <strong>Wikidata</strong>. We created this theoretical model answering the questions: <strong>Who, Where, When, and What</strong> for each item.
+    </p>
+    <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVGtEM8xU=/?embedMode=view_only_without_ui&moveToViewport=668,-2023,2483,1493&embedId=603221991971" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+    
+    
+</section>
+<section class="items-section alt-bg">
+    <h2 class="section-main-title">• KNOWLEDGE REPRESENTATION •</h2>
+
+    <div class="metadata-container">
+        <div class="kr-header">
+            <h3 style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px;margin-left: 18; color: #070707;">Full-Text Analysis</h3>
+            <p class="metadata-description" style="margin-left: 13; max-width: 85%;">
+                In this phase, we conducted an in-depth full-text analysis to extract and encode the semantic structures of our primary textual sources. 
+                Using the <strong>Text Encoding Initiative (TEI)</strong> guidelines, we marked up the script of <em>A Confucian Confusion</em>, capturing not only the structural elements (such as acts, scenes, and dialogues) but also the underlying thematic metadata related to <strong>urban modernity</strong> and <strong>character alienation</strong>. 
+                Below is a snippet of our TEI-XML encoding, demonstrating how narrative elements are transformed into machine-readable data.
+            </p>
+        </div>
+
+        <div class="code-window">
+            <div class="code-window-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="code-title">Edward_Yang_Contemporary_Film_Directors_natural.xml</span>
+            </div>
+            <pre class="code-content"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                &lt;?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?&gt;
+                &lt;TEI xmlns="http://www.tei-c.org/ns/1.0"&gt;
+                
+                    &lt;teiHeader xml:lang="en"&gt;
+                        &lt;fileDesc&gt;
+                            &lt;titleStmt&gt;
+                                &lt;title&gt;&lt;hi rend="italic"&gt;Edward Yang: Poetry and Motion&lt;/hi&gt;: A Digital TEI Edition&lt;/title&gt;
+                                &lt;author&gt;
+                                    &lt;persName xml:id="author_anderson" sameAs="https://www.wikidata.org/wiki/Q6219000"&gt;
+                                        &lt;forename&gt;John&lt;/forename&gt;
+                                        &lt;surname&gt;Anderson&lt;/surname&gt;
+                                    &lt;/persName&gt;
+                                &lt;/author&gt;
+                                &lt;respStmt&gt;
+                                    &lt;resp&gt;Digital encoding, semantic modeling, and TEI markup by&lt;/resp&gt;
+                                    &lt;persName xml:id="editor_student"&gt;
+                                        &lt;forename&gt;Xinyi&lt;/forename&gt;
+                                        &lt;surname&gt;Guo&lt;/surname&gt;
+                                    &lt;/persName&gt;
+                                &lt;/respStmt&gt;
+                            &lt;/titleStmt&gt;
+                            
+                            &lt;publicationStmt&gt;
+                                &lt;publisher&gt;Maverick Engineer LOD Project&lt;/publisher&gt;
+                                &lt;pubPlace&gt;
+                                    &lt;placeName key="Bologna" sameAs="https://www.geonames.org/3181928"&gt;Bologna, Italy&lt;/placeName&gt;
+                                &lt;/pubPlace&gt;
+                                &lt;date when="2026-03"&gt;March 2026&lt;/date&gt;
+                                &lt;availability status="free"&gt;
+                                    &lt;p&gt;Open Access&lt;/p&gt;
+                                    &lt;licence target="https://creativecommons.org/licenses/by/4.0/"&gt;CC-BY 4.0 International&lt;/licence&gt;
+                                &lt;/availability&gt;
+                            &lt;/publicationStmt&gt;
+                            
+                            &lt;sourceDesc&gt;
+                                &lt;bibl xml:id="source_book"&gt;
+                                    &lt;title level="a"&gt;Poetry and Motion&lt;/title&gt; 
+                                    &lt;title level="m"&gt;Edward Yang (Contemporary Film Directors)&lt;/title&gt;
+                                    &lt;author ref="#author_anderson"&gt;John Anderson&lt;/author&gt;
+                                    &lt;publisher&gt;University of Illinois Press&lt;/publisher&gt;
+                                    &lt;date when="2005"&gt;2005&lt;/date&gt;
+                                    &lt;idno type="ISBN"&gt;978-0252072369&lt;/idno&gt;
+                                    &lt;note&gt;This digital edition consists of selected paragraphs from the first chapter.&lt;/note&gt;
+                                &lt;/bibl&gt;
+                            &lt;/sourceDesc&gt;
+                        &lt;/fileDesc&gt;
+                
+                        &lt;encodingDesc&gt;
+                            &lt;projectDesc&gt;
+                                &lt;p&gt;Created for the "Maverick Engineer" LOD and DH course project.&lt;/p&gt;
+                            &lt;/projectDesc&gt;
+                            &lt;samplingDecl&gt;
+                                &lt;p&gt;This text contains non-contiguous selected paragraphs from Chapter 1 ("Poetry and Motion") 
+                                   of John Anderson's book to highlight the biographical, structural, and conceptual background of Edward Yang.&lt;/p&gt;
+                            &lt;/samplingDecl&gt;
+                        &lt;/encodingDesc&gt;
+                
+                        &lt;profileDesc&gt;
+                            &lt;particDesc&gt;
+                                &lt;listPerson type="mentions"&gt;
+                                    &lt;head&gt;Global Entities and Authorities Mentioned&lt;/head&gt;
+                                    &lt;person xml:id="person_edward_yang" sameAs="https://www.wikidata.org/wiki/Q716700"&gt;
+                                        &lt;persName xml:lang="zh"&gt;楊德昌&lt;/persName&gt;
+                                        &lt;persName xml:lang="en"&gt;Edward Yang&lt;/persName&gt;
+                                        &lt;occupation&gt;Film director; leading figure of Taiwan New Cinema.&lt;/occupation&gt;
+                                    &lt;/person&gt;
+                                    &lt;person xml:id="person_herzog" sameAs="https://www.wikidata.org/wiki/Q44131"&gt;
+                                        &lt;persName&gt;Werner Herzog&lt;/persName&gt;
+                                        &lt;occupation&gt;German film director, screenwriter, and author.&lt;/occupation&gt;
+                                    &lt;/person&gt;
+                                    &lt;person xml:id="person_kinski" sameAs="https://www.wikidata.org/wiki/Q55419"&gt;
+                                        &lt;persName&gt;Klaus Kinski&lt;/persName&gt;
+                                        &lt;occupation&gt;German actor known for his collaboration with Herzog.&lt;/occupation&gt;
+                                    &lt;/person&gt;
+                                    &lt;person xml:id="person_fassbinder" sameAs="https://www.wikidata.org/wiki/Q44426"&gt;
+                                        &lt;persName&gt;Rainer Werner Fassbinder&lt;/persName&gt;
+                                        &lt;occupation&gt;Prominent figure of the New German Cinema.&lt;/occupation&gt;
+                                    &lt;/person&gt;
+                                    &lt;person xml:id="person_jean_renoir" sameAs="https://www.wikidata.org/wiki/Q50713"&gt;
+                                        &lt;persName&gt;Jean Renoir&lt;/persName&gt;
+                                        &lt;occupation&gt;French film director.&lt;/occupation&gt;
+                                    &lt;/person&gt;
+                                    &lt;person xml:id="person_tolstoy" sameAs="https://www.wikidata.org/wiki/Q7243"&gt;
+                                        &lt;persName&gt;Leo Tolstoy&lt;/persName&gt;
+                                        &lt;occupation&gt;Russian writer.&lt;/occupation&gt;
+                                    &lt;/person&gt;
+                                    &lt;person xml:id="person_mao_zedong" sameAs="https://www.wikidata.org/wiki/Q5816"&gt;
+                                        &lt;persName&gt;Mao Zedong&lt;/persName&gt;
+                                        &lt;occupation&gt;Chinese communist revolutionary.&lt;/occupation&gt;
+                                    &lt;/person&gt;
+                                &lt;/listPerson&gt;
+                
+                                &lt;listOrg&gt;
+                                    &lt;org xml:id="org_nationalists" sameAs="https://www.wikidata.org/wiki/Q31113"&gt;
+                                        &lt;orgName&gt;Kuomintang (Chinese Nationalists)&lt;/orgName&gt;
+                                    &lt;/org&gt;
+                                    &lt;org xml:id="org_UF" sameAs="https://www.wikidata.org/wiki/Q501758"&gt;
+                                        &lt;orgName&gt;University of Florida&lt;/orgName&gt;
+                                    &lt;/org&gt;
+                                    &lt;org xml:id="org_USC" sameAs="https://www.wikidata.org/wiki/Q4614"&gt;
+                                        &lt;orgName&gt;University of Southern California&lt;/orgName&gt;
+                                    &lt;/org&gt;
+                                &lt;/listOrg&gt;
+                                
+                                &lt;listPlace&gt;
+                                    &lt;place xml:id="place_taiwan" sameAs="https://www.geonames.org/1668284"&gt;
+                                        &lt;placeName&gt;Taiwan&lt;/placeName&gt;
+                                    &lt;/place&gt;
+                                    &lt;place xml:id="place_taipei" sameAs="https://www.geonames.org/1668341"&gt;
+                                        &lt;placeName&gt;Taipei&lt;/placeName&gt;
+                                    &lt;/place&gt;
+                                    &lt;place xml:id="place_shanghai" sameAs="https://www.geonames.org/1796236"&gt;
+                                        &lt;placeName&gt;Shanghai&lt;/placeName&gt;
+                                    &lt;/place&gt;
+                                    &lt;place xml:id="place_hollywood" sameAs="https://www.wikidata.org/wiki/Q34006"&gt;
+                                        &lt;placeName&gt;Hollywood&lt;/placeName&gt;
+                                    &lt;/place&gt;
+                                    &lt;place xml:id="place_us" sameAs="https://www.wikidata.org/wiki/Q30"&gt;
+                                        &lt;placeName&gt;United States&lt;/placeName&gt;
+                                    &lt;/place&gt;
+                                    &lt;place xml:id="place_incan_amazon"&gt;
+                                        &lt;placeName&gt;Incan Amazon&lt;/placeName&gt;
+                                        &lt;note&gt;A rhetorical and historical conflation by the author referring to the Andes-Amazon 
+                                        transition zone explored by Spanish conquistadors in Herzog's film. &lt;/note&gt;
+                                    &lt;/place&gt;
+                                &lt;/listPlace&gt;
+                            &lt;/particDesc&gt;
+                
+                            &lt;textClass&gt;
+                                &lt;keywords scheme="http://id.loc.gov/authorities/subjects"&gt;
+                                    &lt;term xml:id="concept_alienation" sameAs="https://www.wikidata.org/wiki/Q545825"&gt;
+                                        &lt;term xml:lang="en"&gt;Alienation&lt;/term&gt;
+                                        &lt;term xml:lang="zh"&gt;异化&lt;/term&gt;
+                                        &lt;note&gt;The psychological and social isolation of individuals within the urban landscape.&lt;/note&gt;
+                                    &lt;/term&gt;
+                                    &lt;term xml:id="concept_materialism" sameAs="https://www.wikidata.org/wiki/Q7081"&gt;
+                                        &lt;term xml:lang="en"&gt;Materialism&lt;/term&gt;
+                                        &lt;term xml:lang="zh"&gt;物质主义&lt;/term&gt;
+                                        &lt;note&gt;The prioritization of economic gain over spiritual ethics.&lt;/note&gt;
+                                    &lt;/term&gt;
+                                &lt;/keywords&gt;
+                            &lt;/textClass&gt;
+                        &lt;/profileDesc&gt;
+                        
+                        &lt;sourceDesc&gt;
+                            &lt;listBibl&gt;
+                                &lt;head&gt;Films Mentioned in the Text&lt;/head&gt;
+                                &lt;bibl xml:id="item_expectations" sameAs="https://www.wikidata.org/wiki/Q39072310"&gt;
+                                    &lt;title&gt;Expectations&lt;/title&gt;
+                                    &lt;date&gt;1982&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0085626/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_that_day" sameAs="https://www.wikidata.org/wiki/Q3519626"&gt;
+                                    &lt;title&gt;That Day, on the Beach&lt;/title&gt;
+                                    &lt;date&gt;1983&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0085635/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_taipei_story" sameAs="https://www.wikidata.org/wiki/Q3514053"&gt;
+                                    &lt;title&gt;Taipei Story&lt;/title&gt;
+                                    &lt;date&gt;1985&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0089866/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_terrorizer" sameAs="https://www.wikidata.org/wiki/Q640531"&gt;
+                                    &lt;title&gt;The Terrorizer&lt;/title&gt;
+                                    &lt;date&gt;1986&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0091355/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_brighter_summer" sameAs="https://www.wikidata.org/wiki/Q710745"&gt;
+                                    &lt;title&gt;A Brighter Summer Day&lt;/title&gt;
+                                    &lt;date&gt;1991&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0101985/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_confucian_confusion" sameAs="https://www.wikidata.org/wiki/Q2992619"&gt;
+                                    &lt;title&gt;A Confucian Confusion&lt;/title&gt;
+                                    &lt;date&gt;1994&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0109685/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_mahjong" sameAs="https://www.wikidata.org/wiki/Q3277743"&gt;
+                                    &lt;title&gt;Mahjong&lt;/title&gt;
+                                    &lt;date&gt;1996&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0116962/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_yiyi" sameAs="https://www.wikidata.org/wiki/Q704513"&gt;
+                                    &lt;title&gt;Yi Yi&lt;/title&gt;
+                                    &lt;date&gt;2000&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0244316/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_aguirre" sameAs="https://www.wikidata.org/wiki/Q325662"&gt;
+                                    &lt;title&gt;Aguirre&lt;/title&gt;
+                                    &lt;date&gt;1972&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0068182/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_fitzcarraldo" sameAs="https://www.wikidata.org/wiki/Q698111"&gt;
+                                    &lt;title&gt;Fitzcarraldo&lt;/title&gt;
+                                    &lt;date&gt;1982&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0083946/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                                &lt;bibl xml:id="item_nosferatu" sameAs="https://www.wikidata.org/wiki/Q151895"&gt;
+                                    &lt;title&gt;Nosferatu&lt;/title&gt;
+                                    &lt;date&gt;1979&lt;/date&gt;
+                                    &lt;idno type="IMDb"&gt;https://www.imdb.com/title/tt0079641/&lt;/idno&gt;
+                                &lt;/bibl&gt;
+                            &lt;/listBibl&gt;
+                        &lt;/sourceDesc&gt;
+                    &lt;/teiHeader&gt;
+                
+                    &lt;text&gt;
+                        &lt;body&gt;
+                            &lt;div type="selection" n="1" subtype="chapter"&gt;
+                                &lt;head rend="center"&gt;SELECTIONS FROM CHAPTER 1: POETRY AND MOTION&lt;/head&gt;
+                                
+                                &lt;p&gt;
+                                    &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;'s view of his own work has been far more restrained. 
+                                    &lt;q&gt;“I tried to get everything as average as possible,”&lt;/q&gt; he said with characteristic understatement, &lt;lb/&gt;
+                                    not long after the film had played the &lt;name type="event" sameAs="https://www.wikidata.org/wiki/Q1089696"&gt;2000 Cannes Film Festival&lt;/name&gt; 
+                                    and he was awarded the prize for Best Director. &lt;q&gt;“Not too much, not too little, right down the center of &lt;lb/&gt;
+                                    the court,because that's what is most universal. It will touch more people that way. And, actually, it's more dramatic”&lt;/q&gt; &lt;lb/&gt;
+                                    (qtd. in Johnston).
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    &lt;q&gt;“When you make a film like this,”&lt;/q&gt; he told another interviewer, &lt;q&gt;“it's like writing a very intimate &lt;lb/&gt;
+                                    letter to a very good friend. The movie's success is not something that boosts my ego. But that there are so &lt;lb/&gt;
+                                    many friends in the world who understand you--that's a comfortable feeling”&lt;/q&gt; (qtd. in Johnston).
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    Comfortable for &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;, perhaps, but the overarching effect of his &lt;lb/&gt;
+                                    films is as far from solace as the feel-good ethos of current &lt;placeName ref="#place_hollywood"&gt;Hollywood&lt;/placeName&gt; is&lt;lb/&gt; 
+                                    from the blunt-edged humanity of &lt;persName ref="#person_jean_renoir"&gt;Jean Renoir&lt;/persName&gt;. All of &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;'s &lt;lb/&gt;
+                                    films are disquieting, albeit in their own distinct ways. The silent solitude of &lt;title ref="#item_expectations"&gt;Expectations&lt;/title&gt; (1982), the spiritual &lt;lb/&gt;
+                                    slipperiness of &lt;title ref="#item_that_day"&gt;That Day, on the Beach&lt;/title&gt; (1983), the existential dread of &lt;title ref="#item_terrorizer"&gt;The Terrorizer&lt;/title&gt; (1986),&lt;lb/&gt;
+                                    and the interpersonal dysfunction of &lt;title ref="#item_confucian_confusion"&gt;A Confucian Confusion&lt;/title&gt; (1994) and &lt;title ref="#item_mahjong"&gt;Mahjong&lt;/title&gt;&lt;lb/&gt;
+                                    (1996) are all intended to rock audiences out of their popcorn-nourished complacency and into a new awareness of their world and its possibilities.
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    These films are not the stuff of record-shattering box office, nor have they had global exposure, as one can tell &lt;lb/&gt;
+                                    from &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;'s record with &lt;placeName ref="#place_us"&gt;U.S.&lt;/placeName&gt; distributors.&lt;lb/&gt;
+                                    But mass acceptance has never been a barometer of artistic importance. It certainly has not been in the case of &lt;persName ref="#person_edward_yang"&gt;Edward Yang&lt;/persName&gt;.
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    That his films have had trouble even in &lt;placeName ref="#place_taiwan"&gt;Taiwan&lt;/placeName&gt; is an example of what happens to&lt;lb/&gt;
+                                    agents provocateurs on the field of mass entertainment. The principals of the&lt;lb/&gt;
+                                    &lt;term type="movement" sameAs="https://www.wikidata.org/wiki/Q701625"&gt;Taiwanese New Wave&lt;/term&gt; were, of course,&lt;lb/&gt;
+                                    &lt;placeName sameAs="https://www.wikidata.org/wiki/Q48"&gt;Asian&lt;/placeName&gt; film-makers, who were influenced by the&lt;lb/&gt;
+                                    &lt;name type="movement" sameAs="https://www.wikidata.org/wiki/Q167776"&gt;Italian neo-realists&lt;/name&gt;--who inspired the &lt;lb/&gt;
+                                    realism that separates the younger Taiwanese directors from their predecessors-- and impelled not only by artistic &lt;lb/&gt;
+                                    hunger but by a need to explore the singular experience of life on &lt;placeName ref="#place_taiwan"&gt;Taiwan&lt;/placeName&gt;. &lt;lb/&gt;
+                                    With his debut feature, &lt;title ref="#item_that_day"&gt;That Day, on the Beach&lt;/title&gt;, and his landmark &lt;title ref="#item_taipei_story"&gt;Taipei Story&lt;/title&gt; (1985),&lt;lb/&gt;
+                                    &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt; presented modern Taiwanese audiences with something they had not been shown: themselves.
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    With the propulsively dramatic, psychologically ruinous &lt;title ref="#item_brighter_summer"&gt;A Brighter Summer Day&lt;/title&gt;&lt;lb/&gt;
+                                    (1991), &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;'s vision crystallized. &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;&lt;lb/&gt;
+                                    bookended the nineties with &lt;title ref="#item_brighter_summer"&gt;A Brighter Summer Day&lt;/title&gt; and &lt;title ref="#item_yiyi"&gt;Yi Yi&lt;/title&gt;, &lt;lb/&gt;
+                                    achieving with the latter film a kind of synthesis of his own disparate tensions and the full realization of his &lt;persName ref="#person_tolstoy"&gt;Tolstoy&lt;/persName&gt;-esque talents&lt;lb/&gt;
+                                    as a storyteller.
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    The patchwork culture of Taiwanese society, its lack of a traditionally solid foundation, and its seduction by the economic bull &lt;lb/&gt;
+                                    markets of the nineties have been consistent themes for &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt; over the last decade. &lt;lb/&gt;
+                                    &lt;title ref="#item_confucian_confusion"&gt;A Confucian Confusion&lt;/title&gt; (1994) is an aptly titled omnibus of unhappy characters romantically &lt;lb/&gt;
+                                    involved with the wrong people for the wrong reasons, mostly money, which &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt; sees as&lt;lb/&gt;
+                                    &lt;placeName ref="#place_taipei"&gt;Taipei&lt;/placeName&gt;'s chief pollutant and major religion. &lt;title ref="#item_mahjong"&gt;Mahjong&lt;/title&gt; (1996)&lt;lb/&gt;
+                                    was similarly obsessed with the &lt;term ref="#concept_materialism"&gt;materialism&lt;/term&gt;&lt;lb/&gt;of &lt;placeName ref="#place_taipei"&gt;Taipei&lt;/placeName&gt;. &lt;lb/&gt;
+                                    These two films are often seen, thematically, as a pair, just as &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;'s "urban trilogy" serves as&lt;lb/&gt;
+                                    a medley of &lt;term ref="#concept_alienation"&gt;alienation&lt;/term&gt;.
+                                &lt;/p&gt;
+                                
+                                &lt;gap reason="omitted" extent="several paragraphs"/&gt;
+                
+                                &lt;p&gt;
+                                    Born in &lt;placeName ref="#place_shanghai"&gt;Shanghai&lt;/placeName&gt; in &lt;date when="1947"&gt;1947&lt;/date&gt;, &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt; was taken to&lt;lb/&gt;
+                                    &lt;placeName ref="#place_taiwan"&gt;Taiwan&lt;/placeName&gt; by his family in 1949, after &lt;persName ref="#person_mao_zedong"&gt;Mao Zedong&lt;/persName&gt;&lt;lb/&gt;
+                                    took over the mainland and the &lt;orgName ref="#org_nationalists"&gt;Nationalists&lt;/orgName&gt; hit the rowboats. Growing up&lt;lb/&gt;
+                                    in the fifties and sixties, he was among his country's first postwar generation and thus a product of a society (and a &lt;lb/&gt;
+                                    government-encouraged ethos) that stressed the study of science and math to the exclusion of the arts—at least as&lt;lb/&gt;
+                                    a pursuit for respectable people.
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    &lt;q&gt;“I used to enjoy drawing comics when I was a kid,”&lt;/q&gt; &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt; once said, but as&lt;lb/&gt;
+                                    he explains in an interview elsewhere in this book, cultural matters or, for that&lt;lb/&gt;
+                                    matter, &lt;q&gt;“anything that improves people's intelligence,”&lt;/q&gt; was denigrated on&lt;lb/&gt;
+                                    &lt;placeName ref="#place_taiwan"&gt;Taiwan&lt;/placeName&gt;. Young people who could find the strength to resist the status quo&lt;lb/&gt;
+                                    and follow an artistic path were few, and they had to have been particularly courageous.
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    The young &lt;persName ref="#person_edward_yang"&gt;Edward Yang&lt;/persName&gt; was not. As he freely admits, &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt; &lt;lb/&gt;
+                                    &lt;q&gt;“gave in,”&lt;/q&gt; forsaking his first career choice, &lt;term type="discipline" sameAs="https://www.wikidata.org/wiki/Q12271"&gt;architecture&lt;/term&gt;—which he &lt;lb/&gt;
+                                    had imagined as a discipline that could reconcile the creative with the technical—and opting instead for a degree in electrical engineering. (He was compelled, &lt;lb/&gt;
+                                    he has said, to be &lt;q&gt;“a good Chinese son.”&lt;/q&gt;) This led to a move to the &lt;placeName ref="#place_us"&gt;United States&lt;/placeName&gt;, where he received a masters&lt;lb/&gt;
+                                    degree in computer design at the &lt;orgName ref="#org_UF"&gt;University of Florida&lt;/orgName&gt;, after which he went west, enrolling for just a year in the film program at&lt;lb/&gt;
+                                    the &lt;orgName ref="#org_USC"&gt;University of Southern California&lt;/orgName&gt;. (&lt;q&gt;“It was a disastrous experience: I couldn't do a lot of the things they wanted me to do. &lt;lb/&gt;
+                                    My ideas about story and characters were so different.”&lt;/q&gt;)
+                                &lt;/p&gt;
+                
+                
+                                &lt;p&gt;
+                                    &lt;title ref="#item_aguirre"&gt;Aguirre&lt;/title&gt;, one of &lt;persName ref="#person_herzog"&gt;Werner Herzog&lt;/persName&gt;'s famously mad&lt;lb/&gt;
+                                    exercises in excess (other notorious examples are &lt;title ref="#item_fitzcarraldo"&gt;Fitzcarraldo&lt;/title&gt; and&lt;lb/&gt;
+                                    &lt;title ref="#item_nosferatu"&gt;Nosferatu&lt;/title&gt;, all three starring &lt;persName ref="#person_kinski"&gt;Klaus Kinski&lt;/persName&gt;), is about an insane&lt;lb/&gt;
+                                    conquistador in search of gold in the &lt;placeName ref="#place_incan_amazon"&gt;Incan Amazon&lt;/placeName&gt;. &lt;q&gt;“Basically it's&lt;lb/&gt;
+                                    not the style or the beauty of the images that influenced me,”&lt;/q&gt; &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt;&lt;lb/&gt;
+                                    recalled, tellingly. &lt;q&gt;“It was the spirit of the filmmaking of &lt;persName ref="#person_herzog"&gt;Mr. Herzog&lt;/persName&gt;&lt;lb/&gt;
+                                    that was never before seen.”&lt;/q&gt;
+                                &lt;/p&gt;
+                
+                                &lt;p&gt;
+                                    Deciding, on a wave of &lt;persName ref="#person_herzog"&gt;Herzog&lt;/persName&gt;/&lt;persName ref="#person_kinski"&gt;Kinski&lt;/persName&gt;-inspired determination that&lt;lb/&gt;
+                                    &lt;q&gt;“I had to do something I liked before I got real old,”&lt;/q&gt; &lt;persName ref="#person_edward_yang"&gt;Yang&lt;/persName&gt; returned to&lt;lb/&gt;
+                                    &lt;placeName ref="#place_taiwan"&gt;Taiwan&lt;/placeName&gt; in 1981 to pursue a filmmaking career. (Another German, &lt;lb/&gt;
+                                    &lt;persName ref="#person_fassbinder"&gt;Rainer Werner Fassbinder&lt;/persName&gt;, has been cited as a motivating force as well.)
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/body&gt;
+                    &lt;/text&gt;
+                &lt;/TEI&gt;</code></pre>
+        </div>
+
+        <div class="kr-footer">
+            <p class="metadata-description" style="margin-left: 13; max-width: 85%;">
+                To make this encoded text accessible and interactive for human readers, we developed a Python script to transform the TEI-XML document into a stylized webpage. You can view the fully rendered reading interface <a href="your_html_link_here.html" target="_blank" class="text-link">here</a>. 
+                Furthermore, to integrate this textual data into our broader Linked Open Data network, we utilized Python to parse the XML elements and convert them into <strong>RDF triples</strong>, ensuring semantic interoperability.
+            </p>
+            
+            <a href="data/your_rdf_file.rdf" download class="csv-download-btn kr-download-btn">Download RDF File ↓</a>
+        </div>
+    </div>
+    <div class="kr-header" style="margin-top: 60px;">
+        <h3 class="kr-subtitle">RDF Creation</h3>
+        <p class="metadata-description">
+            Following the full-text analysis, we translated our structured datasets into Resource Description Framework (RDF) triples. This process formalizes the relationships between entities—such as people, organizations, concepts, and spatial locations—into a machine-readable graph format. You can download the complete dataset in Turtle (.ttl) format below.
+        </p>
+        <a href="data/your_rdf_file.ttl" download class="csv-download-btn kr-download-btn">Download RDF File ↓</a>
+    </div>
+
+    <div class="kr-header" style="margin-top: 60px;">
+        <h3 class="kr-subtitle">RDF Visualization</h3>
+        <p class="metadata-description">
+            The diagram below visualizes the core ontology and semantic network of our knowledge base. It illustrates how the "Maverick Engineer" conceptual framework connects Edward Yang's cinematic artifacts to broader global datasets like Wikidata and GeoNames. Click the image to explore the network in detail.
+        </p>
+        
+        <div class="item-main-img-container kr-graph-img" onclick="openModal()" title="Click to enlarge" style="max-width: 100%; height: auto; cursor: zoom-in; border: 1px solid #ddd; padding: 10px; background: #fff;">
+            <img id="item-img" src="images/placeholder.jpg" alt="RDF Knowledge Graph Visualization" style="width: 100%; height: auto; display: block;">
+        </div>
+    </div>
+</section>
+
+
+
+
+<div id="image-modal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+    <script src="/maverick-engineer-lod/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,787 @@
+/* 1. 基础重置，去除默认边距 */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', 'Microsoft YaHei', serif;
+}
+body {
+    background-color: #ffffff; 
+    color: #333;
+}
+
+/* 2. 导航栏 (Navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:25px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    position: sticky; 
+    padding: 25px 100px;
+    top: 0;
+    z-index: 100;
+}
+.navbar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+}
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.navbar-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.3em;
+    transition: color 0.3s;
+    font-family: 'Oswald', sans-serif;
+}
+.navbar-links a:hover {
+    color: #440101;
+}
+
+/* 3. 大图横幅 (Hero Image) */
+.hero {
+    width: 100%;
+    height: 70vh; 
+    /* 这里就是你修改本地图片路径的地方！ */
+    background-image: url('images/hero-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 4. 叠层文字区域 (Overlapping Content) */
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: -95px; /* 负边距叠层魔法 */
+    position: relative;
+    z-index: 10; 
+    padding: 0 20px;
+}
+
+/* 文字卡片的样式 */
+.title-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px; 
+    text-align: center;
+    position: relative;
+}
+
+.title-card h1 {
+    font-size: 3.8em;
+    color: #000000;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6em; 
+    letter-spacing: 4px; 
+    text-transform: uppercase;
+}
+
+.title-card .subtitle {
+    font-size: 1.2em;
+    color: #2e3030;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.title-card::after {
+    content: ""; /* 必须为空 */
+    display: block;
+    width: 240px;      /* 线的长度，可以根据喜好调整 */
+    height: 4px;      /* 线的厚度，4px 比较硬朗 */
+    background-color: #000000; /* 纯黑色线 */
+    margin: 35px auto 0; /* 第一个值 35px 是线距离上方文字的距离 */
+    border-radius: 2px; /* 稍微有一点点圆角，看起来不那么生硬 */
+}
+
+/* =========================================
+   5. 加载页面 (Preloader)
+========================================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000; /* 纯黑底色打底 */
+    z-index: 99999;
+    /* 取消了原来的 flex 居中，因为我们要自由定位里面的元素 */
+    transition: opacity 1.5s ease; 
+}
+
+/* 1. 让图片铺满整个屏幕 */
+.loading-img {
+    position: absolute; /* 绝对定位，脱离文档流 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 神级属性：像背景图一样完美裁剪铺满，不变形 */
+    opacity: 0.4; /* 调暗图片（0.4），否则会喧宾夺主，导致白字看不清 */
+    z-index: 1; /* 放在底层 */
+}
+
+/* 2. 定位文字盒子：右边中间偏上 */
+.preloader-text-box {
+    position: absolute;
+    top: 40%; /* 距离顶部 40%（中间偏上一点） */
+    right: 80px;  /* 距离右侧 80px，留出呼吸感 */
+    transform: translateY(-50%); /* 确保基于中心点对齐 */
+    text-align: right; 
+    max-width: 800px; /* 盒子加宽，容纳更大的字 */
+    z-index: 10; /* 层级高于图片，浮在上面 */
+}
+
+/* 3. 中文台词：变大、变白、加粗 */
+.quote-cn {
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 2.2em; /* 字号大幅增加 */
+    color: #ffffff; /* 纯白 */
+    font-weight: bold; /* 加粗 */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* 加上强烈的黑色阴影，即使图片很亮也能看清字 */
+}
+
+/* 4. 英文台词：变大、变白、加粗 */
+.quote-en {
+    font-family: 'IBM Plex Mono', 'Space Mono', monospace; 
+    font-size: 1.3em; /* 相应变大 */
+    color: #ffffff; /* 纯白 */
+    font-weight: bold; /* 加粗 */
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* 加黑影 */
+}
+
+/* 5. 出处标注 */
+.quote-source {
+    font-family: 'Microsoft YaHei', 'IBM Plex Mono', sans-serif;
+    font-size: 1em;
+    color: #e0e0e0; /* 稍微暗一点点的白，拉开层次 */
+    font-style: italic; 
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* 闪烁的 Loading 小字 */
+.loading-indicator {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9em;
+    color: #e74c3c; /* 保持红色极客感 */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: blink 1.5s infinite; 
+}
+
+/* 闪烁动画的定义 */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* 控制加载页消失的类 */
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =========================================
+   6. 内容区块：Study of the Domain
+========================================= */
+.domain-section {
+    display: flex; 
+    max-width: 1050px; /* 因为你左边放了图片，稍微加宽一点整体容器 */
+    margin: 120px auto 60px; 
+    padding: 0 40px;
+    gap: 65px; /* 稍微增加左右间距，让图片和文字有呼吸感 */
+    align-items: flex-start; /* 依然保证顶部对齐作为基准 */
+}
+
+/* ================= 左半部分 (标题 + 图片) ================= */
+.domain-left {
+    flex: 1; /* 给左边稍微多一点点空间，用来放高清大图 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 左侧：区块大标题 */
+.domain-left h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2em; 
+    color: #070707;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0; 
+    margin-bottom: 25px;
+    line-height: 1.1; 
+}
+
+/* 左侧：杨德昌照片 */
+.domain-portrait {
+    width: 90%; 
+    height: auto;
+    border-radius: 4px; 
+}
+
+
+/* ================= 右半部分 (纯文字传记) ================= */
+.domain-right {
+    flex: 1.8; /* 右侧占 1 份宽度，这样文字会排得稍微紧凑方正，像报纸专栏 */
+    display: flex;
+    flex-direction: column; 
+    margin-top: 85px; /* 你可以调整这个数值：数字越大，文字越靠下 */
+}
+
+/* 右侧：正文段落 */
+.domain-right p {
+    font-family: 'Work Sans', 'Georgia', serif; 
+    font-size: 1.05em;
+    line-height: 1.8; /* 舒适的阅读行高 */
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: justify; /* 文字左右两端笔直对齐 */
+}
+/* =========================================
+   7. 内容区块：Our Project (全宽文字 + 右上角标题环绕)
+========================================= */
+.project-section {
+    /* 【核心 1】：这里的 max-width 必须和你上面 .domain-section 的数值一模一样！ */
+    /* 这样它俩的左右边缘才会像刀切一样对齐 */
+    max-width: 1050px; 
+    
+    margin: 0px auto 80px; 
+    padding: 0 40px; /* 这里的 padding 也必须和上面一模一样 */
+    
+    /* ⚠️ 绝对不能加 display: flex; 否则环绕失效！ */
+}
+
+/* 报纸风：右上角浮动的大标题 */
+.project-heading {
+    /* 【核心 2】：让标题飘到最右边 */
+    float: right; 
+    
+    /* 给标题左侧和下方留出“结界”，防止文字贴得太死 */
+    margin-left: 50px; 
+    margin-bottom: 20px; 
+    margin-top: 5px; /* 微调，让标题顶端和第一行文字的顶端齐平 */
+    
+    /* 字体样式保持硬朗风 */
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4em; 
+    color: #020202;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1; 
+}
+
+/* 正文段落样式 */
+.project-section p {
+    font-family: 'Work Sans', 'Georgia', serif; 
+    font-size: 1.05em;
+    line-height: 1.8; 
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: justify; /* 两端对齐，报纸感拉满 */
+}
+
+/* 清除浮动（非常重要的一步：防止因为浮动导致下方排版崩坏） */
+.project-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* =========================================
+   8. 内容区块：引言 (Quote Section)
+========================================= */
+.quote-section {
+    background-color: #ffffff; 
+    padding: 50px 0; /* 稍微加大一点上下内边距，给线条留出呼吸感 */
+    margin: 30px 0 60px 0; 
+    text-align: center; 
+    position: relative; 
+}
+
+/* 上面的黑线 (偏右，不顶边) */
+.quote-section::before {
+    content: ''; /* 伪元素必须有 content，即使是空的 */
+    position: absolute;
+    top: 0;
+    right: 25%; /* 距离右边留出 10% 的空白，你可以改这个数字 */
+    width: 45%; /* 线条的长度，比如占整个屏幕宽度的 45% */
+    height: 2px; /* 线条粗细 */
+    background-color: #111; /* 线条颜色 */
+}
+
+/* 下面的黑线 (偏左，不顶边) */
+.quote-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%; /* 距离左边留出 10% 的空白 */
+    width: 45%; /* 和上面的线一样长 */
+    height: 2px;
+    background-color: #111;
+}
+
+
+/* 限制文字的最大宽度，防止在超大屏幕上一行字拉得太长 */
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 引言正文样式 */
+.quote-text {
+    font-family: 'Work Sans', 'Georgia', serif; 
+    font-size: 1.5em; /* 字号稍大 */
+    font-style: italic; /* 斜体，典型的名言引用格式 */
+    color: #222; /* 接近纯黑，对比度强 */
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 导演/出处 样式 */
+.quote-author {
+    font-family: 'Oswald', 'Space Mono', sans-serif; /* 借用之前的硬朗/档案感字体 */
+    font-size: 1em;
+    color: #777; /* 稍微暗一点，不抢正文风头 */
+    text-transform: uppercase; /* 全部大写 */
+    letter-spacing: 2px;
+    margin-top: 15px; 
+    margin-bottom: 0;
+}
+
+.domain-right strong {
+    font-weight: 600; /* 比普通加粗稍微细一点点，更优雅 */
+    color: #1a1a1a;   /* 颜色更深一些，与正文 #444 拉开差距 */
+}
+
+/* =========================================
+   9. 物品展示区块 (Comic Grid Layout)
+========================================= */
+.items-section {
+    max-width: 1300px;
+    margin: 150px auto;
+    padding: 0 40px;
+    
+}
+
+/* --- 新增：正上方的大标题 --- */
+.section-main-title {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em; /* 极具视觉冲击力的巨大字号 */
+    color: #490101;
+    text-transform: uppercase;
+    letter-spacing: 4px; /* 拉开字间距，更有大片感 */
+    margin-bottom: 50px; /* 和下方的网格拉开距离 */
+}
+
+/* --- 新增：包裹左右两栏的容器 --- */
+.items-container {
+    display: flex; /* 在这里开启左右排布 */
+    gap: 50px;
+    height: 600px; /* 依然保持固定高度，防止抖动 */
+}
+
+/* --- 左侧：漫画格布局 (保留之前的代码不变) --- */
+.comic-grid {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 140px);
+    gap: 10px;
+}
+
+/* 下面的 .panel 和右侧详情页等样式完全保留你之前的即可... */
+.panel {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #111; /* 漫画黑边框 */
+    transition: transform 0.3s ease;
+}
+
+.panel:hover {
+    transform: scale(1.02);
+    z-index: 10;
+    border-color: #e74c3c; /* 悬停变红 */
+}
+
+.panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* 初始黑白，增加档案感 */
+    transition: filter 0.3s ease;
+}
+
+.panel:hover img {
+    filter: grayscale(0%);
+}
+
+.panel-label {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #111;
+    color: #fff;
+    padding: 2px 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7em;
+}
+
+/* --- 核心：手动调整漫画格的大小 (不对称美感) --- */
+.p1 { grid-column: span 2; grid-row: span 2; } /* 第一个物品占 2x2 */
+.p4 { grid-column: span 2; } /* 第四个物品横向占 2 格 */
+.p7 { grid-row: span 2; }    /* 第七个物品纵向占 2 格 */
+
+/* --- 右侧：详情页样式 --- */
+.details-panel {
+    flex: 1;
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 20px 30px 30px 30px;
+    position: sticky;
+    top: 100px; /* 随页面滚动悬浮 */
+    height: 600px; /* 保持与整体容器同高 */
+    box-sizing: border-box; /* 确保 padding 不会撑破高度 */
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 撑满 600px 高度 */
+}
+/* 上半部分主体内容区 */
+.details-main-info {
+    flex-grow: 1; /* 占据所有剩余空间 */
+    overflow-y: auto; /* 如果文字太长，这里会自己出现滚动条 */
+    padding-right: 10px; /* 给滚动条留点呼吸空间 */
+}
+
+/* 缩小标题底部的留白 */
+#item-title {
+    margin-top: 0;
+    margin-bottom: 10px; 
+}
+
+#item-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #111;
+}
+
+.item-main-img-container {
+    width: 100%;
+    height: 200px;
+    background: #eee;
+    margin-bottom: 15px;
+    cursor: zoom-in; 
+}
+
+.item-main-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.metadata-box {
+    margin-bottom: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9em;
+}
+
+.item-description {
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.item-actions {
+    margin-top: auto; 
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* 加一条细线与描述隔开 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* =========================================
+   10. 物品详情页操作区 (Link & Download Button)
+========================================= */
+.item-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* 让链接和按钮上下排列 */
+    gap: 15px; /* 两个按钮之间的间距 */
+}
+
+/* 原文链接样式 */
+.source-link {
+    font-family: 'Work Sans', 'Georgia', serif;
+    font-size: 0.95em;
+    color: #555;
+    text-decoration: underline;
+    text-underline-offset: 4px; /* 让下划线离文字远一点，更好看 */
+    transition: color 0.3s ease;
+}
+
+.source-link:hover {
+    color: #e74c3c; /* 悬停时变成红色 */
+}
+
+/* CSV 下载按钮样式 */
+.csv-download-btn {
+    display: inline-block;
+    font-family: 'Space Mono', monospace; /* 代码感字体 */
+    font-size: 0.7em;
+    color: #fff;
+    background-color: #111; /* 纯黑背景 */
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #111;
+    transition: all 0.3s ease;
+    align-self: flex-start; /* 让按钮宽度包裹文字，不撑满整行 */
+}
+
+.csv-download-btn:hover {
+    background-color: #fff;
+    color: #111;
+    border-color: #111;
+}
+
+/* =========================================
+   11. 图片放大模态框 (Image Modal)
+========================================= */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 2000; /* 层级最高，盖住导航栏 */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* 黑色半透明背景 */
+    cursor: zoom-out; /* 鼠标悬停变缩小镜 */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh; /* 防止图片超过屏幕高度 */
+    object-fit: contain;
+    animation: zoomIn 0.3s ease; /* 弹出的动画 */
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.9); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* =========================================
+   12. 元数据分析区块 (Metadata Analysis)
+========================================= */
+.metadata-section {
+    max-width: 1100px;
+    margin: 100px auto 100px; /* 上下留出足够的呼吸空间 */
+    padding: 0 40px;
+}
+
+/* 说明文字排版 */
+.metadata-description {
+    font-family: 'Work Sans', 'Georgia', serif;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 25px; /* 和表格拉开距离 */
+    text-align: justify;
+    max-width: 1000px; /* 限制一下阅读宽度，体验更好 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 表格外部包裹器（防止在小屏幕上溢出） */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* 屏幕太窄时可以横向滚动表格 */
+}
+
+/* 表格本体样式 */
+.metadata-table {
+    width: 100%;
+    border-collapse: collapse; /* 让边框合并，看起来更干练 */
+    font-family: 'Space Mono', monospace; /* 采用极客/档案感字体 */
+    font-size: 0.9em;
+    text-align: left;
+    background-color: #fff;
+    border: 2px solid #111; /* 外边框硬朗一点 */
+}
+
+/* 表头样式 */
+.metadata-table th {
+    background-color: #111; /* 纯黑表头 */
+    color: #fff;
+    padding: 15px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    border: 1px solid #111;
+}
+
+/* 单元格样式 */
+.metadata-table td {
+    padding: 12px;
+    border: 1px solid #ddd; /* 浅色内部网格线 */
+    color: #333;
+    line-height: 1.5;
+}
+
+/* 斑马线效果（奇偶行颜色交替），增加阅读清晰度 */
+.metadata-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 鼠标悬停高亮效果 */
+.metadata-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* 让特定的列具有不同的视觉粗细（可选） */
+.metadata-table td:first-child {
+    font-weight: bold;
+    color: #111;
+}
+
+/* =========================================
+   14. 知识表示区块 (Knowledge Representation)
+========================================= */
+
+/* 小标题样式 */
+.kr-subtitle {
+    font-family: 'Anton', sans-serif;
+    font-size: 2em;
+    color: #111;
+    margin-bottom: 20px;
+    display: inline-block; /* 让边框只包裹文字长度 */
+    padding-bottom: 5px;
+    margin-left: 15;
+}
+
+/* 包含小标题和描述的头部区域 */
+.kr-header {
+    margin-bottom: 40px;
+}
+
+/* 文本中的普通超链接样式 */
+.text-link {
+    color: #e74c3c;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: #111;
+}
+
+/* --- 代码显示窗口样式 (Mac Terminal Style) --- */
+.code-window {
+    background-color: #282c34; /* 深色代码背景 */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    overflow: hidden; /* 保证圆角 */
+    border: 1px solid #444;
+}
+
+/* 代码窗口的顶部栏 (包含红黄绿三个小圆点) */
+.code-window-header {
+    background-color: #21252b;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #181a1f;
+}
+
+/* 顶部栏的文件名 */
+.code-title {
+    color: #abb2bf;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85em;
+    margin-left: 5px;
+    opacity: 0.8;
+}
+
+/* 代码内容区 */
+.code-content {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto; /* 代码太长时允许横向滚动 */
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9em;
+    color: #abb2bf;
+    line-height: 1.6;
+    max-height: 400px; /* 限制代码块的最大高度，防止占满屏幕 */
+    overflow-y: auto; /* 纵向滚动 */
+}
+
+/* --- 代码块底部区域 --- */
+.kr-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 让内容靠左 */
+    gap: 20px;
+}
+
+/* 调整下载按钮的间距 */
+.kr-download-btn {
+    margin-top: 10px;
+}
+
+/* =========================================
+   15. (Alternating Backgrounds)
+========================================= */
+
+.alt-bg {
+    background-color: #f8f9fa; /* 非常浅的高级灰，不刺眼 */
+    border-top: 1px solid #eaeaea; /* 顶部的极细分割线 */
+    border-bottom: 1px solid #eaeaea; /* 底部的极细分割线 */
+}
+
+/* 确保深色代码框在这个浅色背景里依然好看 */
+.alt-bg .code-window {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* 阴影稍微调柔和一点 */
+}
