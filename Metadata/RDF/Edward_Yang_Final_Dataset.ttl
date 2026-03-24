@@ -1,0 +1,208 @@
+### NAMESPACE DECLARATIONS ###
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+@prefix me: <https://github.com/GGGGGuoxy/maverick-engineer-lod/tree/main/entities/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### KNOWLEDGE GRAPH DATA ###
+
+"Alienation" schema:isRelatedTo me:concept_humanism ;
+    skos:scopeNote "specifically denotes the profound psychological isolation and emotional detachment experienced by individuals navigating Taipei's rapid capitalist expansion."@en .
+
+me:concept_Institutional_Reform owl:sameAs wd:Q11943714 ;
+    skos:definition "the process of reviewing and restructuring state institutions"@en ;
+    skos:scopeNote "specifically denotes the deconstruction of Taiwan's film censorship system and the structural/legal transformation of the film industry during the 1980s."@en .
+
+me:concept_Urban_Life owl:sameAs lcsh:sh85026255 ;
+    skos:scopeNote "specifically refers to the Taipei urban experience as depicted in Edward Yang's films,characterized by the profound socio-economic impacts of globalization and late capitalism"@en .
+
+me:concept_alienation owl:sameAs lcsh:sh85003542 .
+
+me:concept_humanism owl:sameAs wd:Q46158 ;
+    schema:isBasedOn me:item_analects ;
+    skos:definition "Humanism is a philosophical stance that emphasizes the individual and social potential and agency of human beings."@en ;
+    skos:scopeNote "In this project, 'Humanism' specifically highlights Edward Yang's profound concern for individual moral integrity and human dignity."@en .
+
+me:concept_urban_modernity owl:sameAs lcsh:sh85026469 ;
+    schema:isRelatedTo me:concept_humanism ;
+    skos:scopeNote "interrogates the psychological alienation of individuals and the coldness of architectural spaces within the context of Taipei's rapid urban expansion"@en .
+
+me:device_Canon_5D_Mark_II owl:sameAs wd:Q64962 .
+
+me:item_analects dcterms:available "2020-02-16"^^xsd:date ;
+    dcterms:subject lcsh:sh85031069 , lcsh:sh85100886 ;
+    rdf:type aat:300451072 ;
+    schema:archivedAt me:organization_Internet_Archive ;
+    schema:author viaf:89664672 ;
+    schema:datePublished "2014"^^xsd:gYear ;
+    schema:identifier "ISBN 978-0-698-15351-6"@en , ark:/13960/t9d59554c ;
+    schema:inLanguage wd:Q1860 ;
+    schema:instrument "Internet Archive HTML5 Uploader"@en ;
+    schema:isPartOf "Folkscanomy"@en ;
+    schema:publisher me:organization_Penguin_Books ;
+    schema:translator me:person_Annping_Chin ;
+    schema:url <https://archive.org/details/theanalectsconfucius/page/n37/mode/2up> .
+
+me:item_astro_boy dcterms:subject lcsh:sh85026469 , me:concept_humanism ;
+    rdf:type aat:300411663 ;
+    schema:datePublished "1964-07-26"^^xsd:date ;
+    schema:director me:person_Tezuka_Osamu ;
+    schema:fileFormat "87 minutes; partially in color"@en ;
+    schema:inLanguage wd:Q5287 ;
+    schema:productionCompany me:organization_Mushi_Production , me:organization_Tezuka_Productions ;
+    schema:url <https://tezukaosamu.net/en/anime/5.html> .
+
+me:item_atom_films rdf:type aat:300025966 , wd:Q20747045 ;
+    schema:about lcsh:sh2005007658 , me:concept_Institutional_Reform , wd:Q11411984 ;
+    schema:alternateName "原子影視傳播有限公司"@zh ;
+    schema:archivedAt "docs/Business_Registration_Atom_Films.pdf"@en ;
+    schema:capital "8400000"^^xsd:integer ;
+    schema:creator me:person_Edward_Yang ;
+    schema:datePublished "1992-11-17"^^xsd:date ;
+    schema:fileFormat aat:300266022 ;
+    schema:identifier "86892661"^^xsd:integer ;
+    schema:isBasedOn me:item_astro_boy ;
+    schema:location gn:1668284 ;
+    schema:status "nullified"@en ;
+    schema:url <https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do?disj=19D8F5E6C1E0A7CE09CFC6CADDAB9A88&fhl=zh_TW> .
+
+me:item_benton_hall dcterms:subject lcsh:sh85111520 , lcsh:sh99010179 , wd:Q108605510 , wd:Q1881523 ;
+    rdf:type "Building"@en ;
+    schema:dateCreated "1967"^^xsd:gYear ;
+    schema:department me:organization_UF_ECE ;
+    schema:identifier "721"^^xsd:integer ;
+    schema:isPartOf me:organization_UF ;
+    schema:location "946 Center Dr.Gainesville FL 32611"@en ;
+    schema:url <https://www.eng.ufl.edu/facilities/hwcoe-buildings-information/hwcoe-building-directory/name/john-r-benton-hall/> ;
+    schema:value "25878"^^xsd:integer , "4"^^xsd:integer , "67"^^xsd:integer .
+
+me:item_book_anderson dcterms:available "2013-12-18"^^xsd:date ;
+    dcterms:subject lcsh:sh85026469 , me:person_Edward_Yang , wd:Q11411984 , wd:Q4220892 ;
+    rdf:type aat:300055908 ;
+    schema:archivedAt me:organization_Internet_Archive ;
+    schema:author me:person_John_Anderson ;
+    schema:datePublished "2005"^^xsd:gYear ;
+    schema:identifier "ISBN 978-0252072369"@en , urn:oclc:record:1033573422 ;
+    schema:inLanguage wd:Q1860 ;
+    schema:instrument me:device_Canon_5D_Mark_II ;
+    schema:isPartOf "Contemporary Film Directors"@en ;
+    schema:publisher me:publisher_UI_Press ;
+    schema:url <https://archive.org/details/edwardyang00ande/mode/2up> .
+
+me:item_confucian_confusion dcterms:subject gn:1668341 , lcsh:sh85019958 , lcsh:sh85031069 , me:concept_alienation , me:concept_urban_modernity ;
+    rdf:type aat:300263857 ;
+    schema:datePublished "1994"^^xsd:gYear ;
+    schema:depicts me:item_taipei_map ;
+    schema:director me:person_Edward_Yang ;
+    schema:fileFormat 1.85:1; 35 mm; 125 min ;
+    schema:genre aat:300255278 , aat:300417801 , lcsh:sh85014576 , wd:Q11411984 ;
+    schema:identifier "tt0109685"@en ;
+    schema:inLanguage wd:Q3239456 , wd:Q9192 ;
+    schema:isBasedOn me:item_analects ;
+    schema:location gn:1668284 ;
+    schema:productionCompany me:item_atom_films ;
+    schema:url <https://www.imdb.com/title/tt0109685/> .
+
+me:item_manifesto dcterms:subject me:concept_Institutional_Reform , wd:Q11411984 ;
+    rdf:type aat:300026393 ;
+    schema:alternateName "1987 臺灣電影宣言"@zh ;
+    schema:archivedAt <https://p.udpweb.com/wxm/i/volno/0:104> ;
+    schema:citation <https://search.worldcat.org/zh-cn/title/66161126> ;
+    schema:creator me:person_Edward_Yang , me:person_Hou_Hsiao_hsien , me:person_Wu_Nien_jen ;
+    schema:datePublished "1987-02-01"^^xsd:date ;
+    schema:inLanguage wd:Q18130932 ;
+    schema:locationCreated gn:1668284 ;
+    schema:publisher me:organization_China_Times , me:organization_Wenxin_Magazine ;
+    schema:spatialCoverage gn:1668284 ;
+    schema:temporalCoverage "before the end of Martial Law"@en ;
+    schema:url <https://www.twreporter.org/a/saturday-features-film-interview-jan-hung-tze> .
+
+me:item_stage_photo dcterms:subject lcsh:sh85046445 ;
+    rdf:type aat:300386099 ;
+    schema:about me:item_manifesto ;
+    schema:creator me:person_Mandel_Ngan ;
+    schema:datePublished "1997-03-01"^^xsd:date ;
+    schema:director me:person_Edward_Yang ;
+    schema:fileFormat "1024 x 720 px (8,67 x 6,10 cm) - 300 dpi -"@en ;
+    schema:identifier "2254629295"^^xsd:integer ;
+    schema:location gn:1819729 , wd:Q125935090 ;
+    schema:url <https://www.gettyimages.nl/detail/nieuwsfoto%27s/actors-play-a-scene-from-a-sketch-by-director-edward-yang-nieuwsfotos/2254629295?adppopup=true> .
+
+me:item_taipei_map dcterms:subject gn:1668341 ;
+    rdf:type aat:300266197 ;
+    schema:contributor me:person_Huang_Qingqi ;
+    schema:creator me:organization_Ta_Yu_Publishing ;
+    schema:dateCreated "2013-10-24"^^xsd:date ;
+    schema:genre "Post-World War II Thematic Maps"@en ;
+    schema:identifier "2004.003.0188" ;
+    schema:locationCreated gn:1668341 ;
+    schema:material aat:300014173 ;
+    schema:temporalCoverage "1985"^^xsd:gYear ;
+    schema:url <https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&RNO=2004.003.0188#> .
+
+me:item_yiyi dcterms:subject lcsh:sh85026469 , lcsh:sh85036226 , me:concept_humanism ;
+    rdf:type aat:300263857 ;
+    schema:award wd:Q510175 ;
+    schema:countryOfOrigin gn:1668284 , gn:1861060 ;
+    schema:datePublished "2000-12-16"^^xsd:date ;
+    schema:depicts me:item_taipei_map ;
+    schema:director me:person_Edward_Yang ;
+    schema:duration "173 minutes"@en ;
+    schema:event wd:Q1089696 ;
+    schema:genre aat:300255278 , aat:300417801 , wd:Q11411984 ;
+    schema:inLanguage wd:Q3239456 , wd:Q9192 ;
+    schema:keywords me:concept_Urban_Life ;
+    schema:location gn:1668284 ;
+    schema:productionCompany me:item_atom_films ;
+    schema:url <https://www.festival-cannes.com/en/f/yi-yi-2> .
+
+me:organization_China_Times owl:sameAs wd:Q697429 .
+
+me:organization_Internet_Archive owl:sameAs wd:Q461 .
+
+me:organization_Mushi_Production owl:sameAs wd:Q1377799 .
+
+me:organization_Penguin_Books owl:sameAs wd:Q1336200 .
+
+me:organization_Ta_Yu_Publishing schema:address "108,Taiwan,Taipei City,Wanhua District,Guangzhou St,189/5F"@en ;
+    schema:location gn:1668341 .
+
+me:organization_Tezuka_Productions owl:sameAs wd:Q2090847 .
+
+me:organization_UF owl:sameAs wd:Q501758 .
+
+me:organization_Wenxin_Magazine owl:sameAs wd:Q11079943 .
+
+me:person_Annping_Chin owl:sameAs viaf:112077809 .
+
+me:person_Edward_Yang owl:sameAs viaf:32206370 ;
+    schema:alternateName "Yang Dechang"@en , "楊德昌"@zh ;
+    schema:alumniOf me:organization_UF_ECE ;
+    schema:colleague me:person_Hou_Hsiao_hsien , me:person_Wu_Nien_jen ;
+    schema:hasOccupation wd:Q2526255 ;
+    schema:isBasedOn lcsh:sh85111520 , me:item_analects , wd:Q1881523 .
+
+me:person_Hou_Hsiao_hsien owl:sameAs viaf:59922938 .
+
+me:person_Huang_Qingqi owl:sameAs viaf:264144928079754341420 .
+
+me:person_John_Anderson owl:sameAs wd:Q6219000 .
+
+me:person_Mandel_Ngan owl:sameAs <https://www.instagram.com/mandelngan/> .
+
+me:person_Tezuka_Osamu owl:sameAs viaf:40771534 .
+
+me:person_Wu_Nien_jen owl:sameAs viaf:27278925 .
+
+me:publisher_UI_Press owl:sameAs wd:Q2080232 .
+

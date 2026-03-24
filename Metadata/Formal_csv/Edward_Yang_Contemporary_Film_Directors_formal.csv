@@ -1,0 +1,17 @@
+﻿Subject,Predicate,Object
+me:item_book_anderson,schema:url,<https://archive.org/details/edwardyang00ande/mode/2up>
+me:item_book_anderson,schema:identifier,"""ISBN 978-0252072369"""
+me:item_book_anderson,schema:identifier,urn:oclc:record:1033573422
+me:item_book_anderson,rdf:type,aat:300055908
+me:item_book_anderson,schema:author,me:person_John_Anderson
+me:item_book_anderson,schema:datePublished,"""2005"""
+me:item_book_anderson,schema:inLanguage,wd:Q1860
+me:item_book_anderson,schema:publisher,me:publisher_UI_Press
+me:item_book_anderson,schema:isPartOf,"""Contemporary Film Directors"""
+me:item_book_anderson,schema:archivedAt,me:organization_Internet_Archive
+me:item_book_anderson,schema:instrument,me:device_Canon_5D_Mark_II
+me:item_book_anderson,dcterms:available,"""2013-12-18"""
+me:item_book_anderson,dcterms:subject,me:person_Edward_Yang
+me:item_book_anderson,dcterms:subject,wd:Q4220892
+me:item_book_anderson,dcterms:subject,wd:Q11411984
+me:item_book_anderson,dcterms:subject,lcsh:sh85026469
