@@ -52,7 +52,7 @@ const itemsData = {
         desc: "An original draft of the The 1987 'Taiwan Cinema Manifesto' is a foundational document co-signed by Edward Yang and fellow visionary filmmakers. This bold declaration demanded a 'New Cinema' that prioritized cultural identity and artistic integrity over commercial exploitation, screenplay, showcasing Yang's meticulous notes on character dialogue and urban alienation.",
         img: "images/item1_big.jpg",
         sourceUrl: "https://www.twreporter.org/a/saturday-features-film-interview-jan-hung-tze", 
-        csvFile: "data/item1.csv" 
+        csvFile: "data/1987 Taiwan Cinema Manifesto.csv" 
     },
     2: {
         title: "Atom Films",
@@ -60,7 +60,7 @@ const itemsData = {
         desc: "An independent production entity founded by Edward Yang in 1992. This entity served as the operational core during his 'Independent Exploration' period.",
         img: "images/item2_big.jpg",
         sourceUrl: "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do?disj=19D8F5E6C1E0A7CE09CFC6CADDAB9A88&fhl=zh_TW",
-        csvFile: "data/item2.csv"
+        csvFile: "data/Atom Films.csv"
     },
     3: {
         title: "Astro Boy: THE BRAVE IN SPACE",
@@ -68,7 +68,7 @@ const itemsData = {
         desc: "A pioneering Japanese animated series directed by Osamu Tezuka. It served as a profound spiritual totem for Edward Yang, inspiring both his humanistic worldview and the naming of his independent production company, 'Atom Films'. It symbolizes his lifelong pursuit of marrying technological rationality with artistic creation.",
         img: "images/item3_big.jpg",
         sourceUrl: "https://tezukaosamu.net/en/anime/5.html",
-        csvFile: "data/item3.csv"
+        csvFile: "data/Astro Boy THE BRAVE IN SPACE.csv"
     },
     4: {
         title: "Map of Streets in Taipei City",
@@ -76,7 +76,7 @@ const itemsData = {
         desc: "This 1985 map serves as the spatial backbone of our cinematic network. It doesn't just show roads; it provides the coordinate system for Edward Yang's narratives. Both A Confucian Confusion and Yi Yi are semantically anchored to this specific cartographic record, illustrating how the 'Maverick Engineer' utilized the rigid urban grid to frame his stories of human alienation. ",
         img: "images/item4_big.jpg",
         sourceUrl: "https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&RNO=2004.003.0188#",
-        csvFile: "data/item4.csv"
+        csvFile: "data/Map of Streets in Taipei City under Direct Jurisdiction.csv"
     },
     5: {
         title: "A Confucian Confusion",
@@ -84,7 +84,7 @@ const itemsData = {
         desc: "A satirical masterpiece that dissects the ideological confusion between traditional Confucian ethics and the hyper-capitalist reality of 1990s Taipei. It marks a critical point in Yang's independent era, utilizing rapid-fire dialogue to critique modern urban life.",
         img: "images/item5_big.jpg",
         sourceUrl: "https://www.imdb.com/title/tt0109685/",
-        csvFile: "data/item5.csv"
+        csvFile: "data/A Confucian Confusion.csv"
     },
     6: {
         title: "The Analects",
@@ -92,7 +92,7 @@ const itemsData = {
         desc: "An authoritative English translation by historian Annping Chin that emphasizes historical authenticity. This text forms an intertextual relationship with Yang's deconstruction of Confucian traditions in A Confucian Confusion. It reveals the ruptures and 'confusion' that arise when ancient ethics confront the modern metropolis (such as Taipei).",
         img: "images/item6_big.jpeg",
         sourceUrl: "https://archive.org/details/theanalectsconfucius/page/n37/mode/2up",
-        csvFile: "data/item6.csv"
+        csvFile: "data/The Analects.csv"
     },
     7: {
         title: "John R. Benton Hall",
@@ -100,7 +100,7 @@ const itemsData = {
         desc: "The historic seat of the College of Engineering at UF. For Edward Yang, this hall was the physical locus where his 'Western Logic' was crystallized. The rigorous pedagogical environment here provided the intellectual scaffolding for his future cinematic dissections of modern society, bridging the gap between electrical systems and social systems.",
         img: "images/item7_big.jpg",
         sourceUrl: "https://www.eng.ufl.edu/facilities/hwcoe-buildings-information/hwcoe-building-directory/name/john-r-benton-hall/",
-        csvFile: "data/item7.csv"
+        csvFile: "data/John R. Benton Hall.csv"
     },
     8: {
         title: "Stage photo of 'Journey to the East 97 Beijing, Hong Kong, Taipei'",
@@ -108,7 +108,7 @@ const itemsData = {
         desc: "In January 1997, Edward Yang participated in the 'One Table, Two Chairs' theatrical experiment in Hong Kong. This photograph captures how he translated his urban observations of Taipei into a cross-regional theatrical language, foreshadowing the globalized perspective on modern anxiety seen in his later works.",
         img: "images/item8_big.jpg",
         sourceUrl: "https://www.gettyimages.nl/detail/nieuwsfoto%27s/actors-play-a-scene-from-a-sketch-by-director-edward-yang-nieuwsfotos/2254629295?adppopup=true",
-        csvFile: "data/item8.csv"
+        csvFile: "data/Stage photo of Journey to the East 97 Beijing, Hong Kong, Taipei.csv"
     },
     9: {
         title: "Yi Yi: A One and a Two",
@@ -116,7 +116,7 @@ const itemsData = {
         desc: "Edward Yang's magnum opus which won him the Best Director award at the 53rd Cannes Film Festival. Funded by Japanese capital, this transnational co-production represents the pinnacle of his independent artistic journey. It offers a macroscopic, multi-generational observation of middle-class struggles, urban alienation, and the universal human condition in contemporary Taipei.",
         img: "images/item9_big.jpeg",
         sourceUrl: "https://www.festival-cannes.com/en/f/yi-yi-2",
-        csvFile: "data/item9.csv"
+        csvFile: "data/YIYI.csv"
     },
     10: {
         title: "Edward Yang (Contemporary Film Directors)",
@@ -124,7 +124,7 @@ const itemsData = {
         desc: "This 2005 biography by John Anderson offers a comprehensive overview of Edward Yang's cinematic legacy. As a cornerstone of the Contemporary Film Directors collection, the book examines Yang's role as a pioneering architect of the Taiwan New Cinema.",
         img: "images/item10_big.png",
         sourceUrl: "https://archive.org/details/edwardyang00ande/mode/2up",
-        csvFile: "data/item10.csv"
+        csvFile: "data/Edward Yang (Contemporary Film Directors).csv"
     },
 };
 
