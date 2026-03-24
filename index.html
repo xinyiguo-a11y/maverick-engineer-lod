@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Yang: Digital Humanities Project</title>
-    <link rel="stylesheet" href="/maverick-engineer-lod/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Oswald:wght@500&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,8 +21,24 @@
         <a href="#" class="navbar-logo">Maverick Engineer LODLAM</a>
         <ul class="navbar-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Knowledge Organization</a></li>
-            <li><a href="text.html">Knowledge Representation</a></li> <li><a href="#">About</a></li>
+            
+            <li class="dropdown">
+                <a href="#knowledge-organization">Knowledge Organization ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#theoretical-model">Theoretical Model</a></li>
+                    <li><a href="#conceptual-model">Conceptual Model</a></li>
+                </ul>
+            </li>
+            
+            <li class="dropdown">
+                <a href="#knowledge-representation">Knowledge Representation ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#full-text-analysis">Full-Text Analysis</a></li>
+                    <li><a href="#rdf-creation">RDF Creation</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#about">About</a></li>
         </ul>
     </nav>
 
@@ -217,11 +233,11 @@
 </section>
 
 
-    <h2 class="section-main-title">• KNOWLEDGE ORGANIZATION •</h2>
+    <h2 id="knowledge-organization" class="section-main-title">• KNOWLEDGE ORGANIZATION •</h2>
 
 <section class="model-section" style="max-width: 1050px; margin: 0 auto 100px; padding: 0 40px; text-align: left;">
     
-    <h3 style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px; color: #080808;">
+    <h3 id="theoretical-model" style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px; color: #080808;">
         Theoretical Model
     </h3>
 
@@ -230,7 +246,7 @@
     </p>
     <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVGtEM8xU=/?embedMode=view_only_without_ui&moveToViewport=668,-2023,2483,1493&embedId=603221991971" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
     
-    <h3 style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px; color: #030303;">
+    <h3 id="conceptual-model" style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px; color: #030303;">
         Conceptual Model
     </h3>
 
@@ -242,11 +258,11 @@
     
 </section>
 <section class="items-section alt-bg">
-    <h2 class="section-main-title">• KNOWLEDGE REPRESENTATION •</h2>
+    <h2 id="knowledge-representation" class="section-main-title">• KNOWLEDGE REPRESENTATION •</h2>
 
     <div class="metadata-container">
         <div class="kr-header">
-            <h3 style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px;margin-left: 18; color: #070707;">Full-Text Analysis</h3>
+            <h3 id="full-text-analysis" style="font-family: 'Oswald', sans-serif; font-size: 2.1em; text-transform: uppercase; margin-bottom: 20px;margin-left: 18; color: #070707;">Full-Text Analysis</h3>
             <p class="metadata-description" style="margin-left: 13; max-width: 85%;">
                 In this phase, we conducted an in-depth full-text analysis to extract and encode the semantic structures of our primary textual sources. 
                 Using the <strong>Text Encoding Initiative (TEI)</strong> guidelines, we marked up the script of <em>A Confucian Confusion</em>, capturing not only the structural elements (such as acts, scenes, and dialogues) but also the underlying thematic metadata related to <strong>urban modernity</strong> and <strong>character alienation</strong>. 
@@ -588,23 +604,58 @@
         </div>
 
         <div class="kr-footer">
-            <p class="metadata-description" style="margin-left: 13; max-width: 85%;">
+            <p class="metadata-description" style="margin-left: 13px; max-width: 85%;">
                 To make this encoded text accessible and interactive for human readers, we developed a Python script to transform the TEI-XML document into a stylized webpage. You can view the fully rendered reading interface <a href="your_html_link_here.html" target="_blank" class="text-link">here</a>. 
                 Furthermore, to integrate this textual data into our broader Linked Open Data network, we utilized Python to parse the XML elements and convert them into <strong>RDF triples</strong>, ensuring semantic interoperability.
             </p>
             
-            <a href="data/your_rdf_file.rdf" download class="csv-download-btn kr-download-btn">Download RDF File ↓</a>
+            <a href="data/your_rdf_file.rdf" download class="csv-download-btn kr-download-btn center-btn">Download RDF File ↓</a>
         </div>
-    </div>
-    <div class="kr-header" style="margin-top: 60px;">
-        <h3 class="kr-subtitle">RDF Creation</h3>
+    </div> 
+</section> 
+
+<section class="items-section alt-bg" style="margin-top: 0; padding-top: 60px;">
+    <div class="metadata-container kr-custom-width">
+
+    <div class="kr-header"> 
+        <h3 id="rdf-creation" class="kr-subtitle">RDF Creation</h3>
         <p class="metadata-description">
-            Following the full-text analysis, we translated our structured datasets into Resource Description Framework (RDF) triples. This process formalizes the relationships between entities—such as people, organizations, concepts, and spatial locations—into a machine-readable graph format. You can download the complete dataset in Turtle (.ttl) format below.
+            Following the full-text analysis, we translated our structured datasets into Resource Description Framework (RDF) triples. This process formalizes the relationships between entities—such as people, organizations, concepts, and spatial locations—into a machine-readable graph format.
         </p>
-        <a href="data/your_rdf_file.ttl" download class="csv-download-btn kr-download-btn">Download RDF File ↓</a>
+
+        <div class="table-wrapper" style="max-width: 800px; margin: 40px auto;">
+            <table class="metadata-table">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">Prefix</th>
+                        <th>Namespace URI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="text-align: center;"><strong>me</strong></td><td>https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/</td></tr>
+                    <tr><td style="text-align: center;"><strong>schema</strong></td><td>https://schema.org/</td></tr>
+                    <tr><td style="text-align: center;"><strong>skos</strong></td><td>http://www.w3.org/2004/02/skos/core#</td></tr>
+                    <tr><td style="text-align: center;"><strong>rdfs</strong></td><td>http://www.w3.org/2000/01/rdf-schema#</td></tr>
+                    <tr><td style="text-align: center;"><strong>dcterms</strong></td><td>http://purl.org/dc/terms/</td></tr>
+                    <tr><td style="text-align: center;"><strong>wd</strong></td><td>https://www.wikidata.org/entity/</td></tr>
+                    <tr><td style="text-align: center;"><strong>viaf</strong></td><td>http://viaf.org/viaf/</td></tr>
+                    <tr><td style="text-align: center;"><strong>owl</strong></td><td>http://www.w3.org/2002/07/owl#</td></tr>
+                    <tr><td style="text-align: center;"><strong>prov</strong></td><td>http://www.w3.org/ns/prov#</td></tr>
+                    <tr><td style="text-align: center;"><strong>rdf</strong></td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr>
+                    <tr><td style="text-align: center;"><strong>gn</strong></td><td>&lt;http://www.geonames.org/ontology#&gt;</td></tr>
+                    <tr><td style="text-align: center;"><strong>aat</strong></td><td>&lt;http://vocab.getty.edu/aat/&gt;</td></tr>
+                    <tr><td style="text-align: center;"><strong>lcsh</strong></td><td>&lt;http://id.loc.gov/authorities/subjects/&gt;</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="metadata-description">
+            You can download the complete dataset in Turtle (.ttl) format below.
+        </p>
+        <a href="data/your_rdf_file.ttl" download class="csv-download-btn kr-download-btn center-btn">Download RDF File ↓</a>
     </div>
 
-    <div class="kr-header" style="margin-top: 60px;">
+    <div class="kr-header" style="margin-top: 10px;">
         <h3 class="kr-subtitle">RDF Visualization</h3>
         <p class="metadata-description">
             The diagram below visualizes the core ontology and semantic network of our knowledge base. It illustrates how the "Maverick Engineer" conceptual framework connects Edward Yang's cinematic artifacts to broader global datasets like Wikidata and GeoNames. Click the image to explore the network in detail.
@@ -616,6 +667,60 @@
     </div>
 </section>
 
+<section id="about" class="items-section" style="margin-bottom: 0; padding-bottom: 100px;">
+    <h2 class="section-main-title">• ABOUT THE PROJECT •</h2>
+
+    <div class="domain-section" style="margin-top: 50px;">
+        
+        <div class="domain-left" style="flex: 1;">
+            <img src="images/author-placeholder.jpg" alt="Portrait of Xinyi Guo" class="domain-portrait" style="border: 2px solid #111;">
+        </div>
+
+        <div class="domain-right" style="flex: 2; margin-top: 0;">
+            <h3 style="font-family: 'Oswald', sans-serif; font-size: 2.2em; margin-bottom: 10px; color: #111; text-transform: uppercase;">
+                Xinyi Guo
+            </h3>
+            <p style="font-family: 'Space Mono', monospace; font-size: 0.9em; color: #e74c3c; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px;">
+                Project Creator & Developer
+            </p>
+            
+            <p>
+                <strong>Maverick Engineer LODLAM</strong> was developed as the final project for the course <i>Information Science and Cultural Heritage</i> (A.Y. 2024/2025), part of the Master's degree program in Digital Humanities and Digital Knowledge (DHDK) at the <strong>Alma Mater Studiorum Università di Bologna</strong>.
+            </p>
+            
+            <p>
+                The project bridges the gap between cinematic art and semantic technologies. By treating the films, manuscripts, and biographical elements of Taiwanese filmmaker Edward Yang as cultural heritage items, this digital archive transforms qualitative narrative analysis into structured <strong>Linked Open Data (LOD)</strong>. 
+            </p>
+
+            <p>
+                The methodologies employed throughout this workflow include conceptual modeling, rigorous metadata alignment (utilizing vocabularies such as Dublin Core, Schema.org, and Wikidata), TEI-XML text encoding, and the creation of an RDF knowledge graph to ensure semantic interoperability across the web.
+            </p>
+
+            <div class="item-actions" style="flex-direction: row; gap: 20px; border-top: none; margin-top: 30px; padding-top: 0;">
+                <a href="https://github.com/xinyiguo-a11y/maverick-engineer-lod" target="_blank" class="csv-download-btn">View on GitHub ↗</a>
+                <a href="mailto:xinyi.guo@studio.unibo.it" class="csv-download-btn" style="background-color: #fff; color: #111;">Contact Me ✉</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h4 class="footer-logo">Maverick Engineer LODLAM</h4>
+            <p>&copy;2026 Copyright Xinyi Guo. All rights reserved.</p>
+            <p>Developed for the course Information Science and Cultural Heritage,
+                A.Y. 2024/2025 within the master course in Digital Humanities and Digital Knowledge at the Alma Mater Studiorum in Bologna.</p>
+        </div>
+        
+        <div class="footer-right">
+            <p><strong>Alma Mater Studiorum Università di Bologna</strong></p>
+            <p>Via Zamboni 33</p>
+            <p>40126 BO Bologna</p>
+        </div>
+    </div>
+</footer>
+
 
 
 
@@ -623,6 +728,6 @@
     <span class="close-modal">&times;</span>
     <img class="modal-content" id="modal-img">
 </div>
-    <script src="/maverick-engineer-lod/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

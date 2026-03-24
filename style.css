@@ -785,3 +785,153 @@ body {
 .alt-bg .code-window {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* 阴影稍微调柔和一点 */
 }
+
+/* =========================================
+   16. 新增辅助样式 (Utility Classes)
+========================================= */
+
+/* 强制让元素在 Flex 或 Block 容器中居中 */
+.center-btn {
+    align-self: center !important; /* 覆盖父级 flex 容器的左对齐 */
+    margin: 20px auto !important;  /* 保证上下有呼吸感，左右自动居中 */
+    display: block;
+}
+
+/* =========================================
+   17. 底部版权区 (Footer)
+========================================= */
+.site-footer {
+    background-color: #111; /* 采用硬朗的深黑色底色 */
+    color: #f1f1f1;
+    padding: 60px 40px;
+    margin-top: 0;
+    border-top: 4px solid #e74c3c; /* 顶部加一条红色极客感线条，呼应悬停特效 */
+}
+
+.footer-container {
+    max-width: 1050px; /* 和你上方内容的宽度保持一致，对齐边缘 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 左右垂直居中对齐 */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* 左侧样式 */
+.footer-left h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-left p {
+    font-family: 'Space Mono', monospace; /* 代码感字体显示版权 */
+    font-size: 0.85em;
+    color: #999; /* 稍微暗一点的灰色 */
+    margin: 0 0 5px 0;
+}
+
+/* 右侧学校信息样式 */
+.footer-right {
+    text-align: left; /* 右对齐排版更像报纸版头/版尾 */
+}
+
+.footer-right p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95em;
+    color: #bbb;
+    margin: 0 0 5px 0;
+    line-height: 1.5;
+}
+
+.footer-right strong {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* 学校名称大写，增强学术威严感 */
+    font-weight: normal;
+}
+
+/* 响应式设计：在手机小屏幕上自动变成上下居中排列 */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .footer-right {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* =========================================
+   18. 全局平滑滚动与防遮挡修复
+========================================= */
+html {
+    scroll-behavior: smooth; /* 开启丝滑滚动动画 */
+    /* 导航栏大约高 80-90px，这里设置 120px 可以让跳转后标题上方留出完美的呼吸空间 */
+    scroll-padding-top: 120px; 
+}
+
+/* =========================================
+   19. 导航栏下拉菜单 (Dropdown)
+========================================= */
+.navbar-links li {
+    position: relative; /* 确立子菜单的绝对定位基准 */
+}
+
+/* 隐藏下拉菜单本体 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 吸附在父元素的正下方 */
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 250px; /* 保证较长的英文单词不折行 */
+    z-index: 200;
+    border-top: 3px solid #e74c3c; /* 顶部加一条主题红线，增加极客感 */
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+/* 下拉菜单内的文字样式 */
+.dropdown-menu li a {
+    font-size: 1.05em;
+    padding: 12px 25px;
+    display: block;
+    color: #444;
+    text-transform: none; /* 取消强制大写，让长标题更易读 */
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* 鼠标悬停在下拉菜单项上的效果 */
+.dropdown-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #e74c3c; /* 文字变红 */
+}
+
+/* 魔法时刻：当鼠标悬停在带有 dropdown 类的父级 li 上时，显示下拉菜单 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease; /* 加入轻微的淡入效果 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
