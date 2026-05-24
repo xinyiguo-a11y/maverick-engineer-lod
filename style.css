@@ -795,6 +795,7 @@ body {
     align-self: center !important; /* 覆盖父级 flex 容器的左对齐 */
     margin: 20px auto !important;  /* 保证上下有呼吸感，左右自动居中 */
     display: block;
+    width: fit-content;
 }
 
 /* =========================================
