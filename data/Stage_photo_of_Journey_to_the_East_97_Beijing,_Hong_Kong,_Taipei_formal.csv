@@ -1,0 +1,12 @@
+﻿Subject,Predicate,Object
+me:item_stage_photo,schema:url,<https://www.gettyimages.nl/detail/nieuwsfoto%27s/actors-play-a-scene-from-a-sketch-by-director-edward-yang-nieuwsfotos/2254629295?adppopup=true>
+me:item_stage_photo,schema:identifier,"""2254629295"""
+me:item_stage_photo,rdf:type,aat:300386099
+me:item_stage_photo,schema:creator,me:person_Mandel_Ngan
+me:item_stage_photo,schema:director,me:person_Edward_Yang
+me:item_stage_photo,schema:datePublished,"""1997-03-01"""
+me:item_stage_photo,schema:location,wd:Q125935090
+me:item_stage_photo,dcterms:subject,lcsh:sh85046445
+me:item_stage_photo,schema:location,gn:1819729
+me:item_stage_photo,schema:fileFormat,"""1024 x 720 px (8,67 x 6,10 cm) - 300 dpi -"""
+me:item_stage_photo,schema:about,me:item_manifesto

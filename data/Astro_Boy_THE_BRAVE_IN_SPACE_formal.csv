@@ -1,0 +1,11 @@
+﻿Subject,Predicate,Object
+me:item_astro_boy,schema:url,<https://tezukaosamu.net/en/anime/5.html>
+me:item_astro_boy,rdf:type,aat:300411663
+me:item_astro_boy,schema:director,me:person_Tezuka_Osamu
+me:item_astro_boy,schema:productionCompany,me:organization_Tezuka_Productions
+me:item_astro_boy,schema:productionCompany,me:organization_Mushi_Production
+me:item_astro_boy,schema:datePublished,"""1964-07-26"""
+me:item_astro_boy,schema:inLanguage,wd:Q5287
+me:item_astro_boy,schema:fileFormat,"""87 minutes; partially in color"""
+me:item_astro_boy,dcterms:subject,lcsh:sh85026469
+me:item_astro_boy,dcterms:subject,me:concept_humanism

@@ -1,0 +1,16 @@
+﻿Subject,Predicate,Object
+me:item_analects,schema:url,<https://archive.org/details/theanalectsconfucius/page/n37/mode/2up>
+me:item_analects,schema:identifier,"""ISBN 978-0-698-15351-6"""
+me:item_analects,schema:identifier,ark:/13960/t9d59554c
+me:item_analects,rdf:type,aat:300451072
+me:item_analects,schema:author,viaf:89664672
+me:item_analects,schema:translator,me:person_Annping_Chin
+me:item_analects,schema:datePublished,"""2014"""
+me:item_analects,schema:publisher,me:organization_Penguin_Books
+me:item_analects,schema:isPartOf,"""Folkscanomy"""
+me:item_analects,schema:inLanguage,wd:Q1860
+me:item_analects,schema:archivedAt,me:organization_Internet_Archive
+me:item_analects,schema:instrument,"""Internet Archive HTML5 Uploader"""
+me:item_analects,dcterms:available,"""2020-02-16"""
+me:item_analects,dcterms:subject,lcsh:sh85031069
+me:item_analects,dcterms:subject,lcsh:sh85100886

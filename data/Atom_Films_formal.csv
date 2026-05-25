@@ -1,0 +1,17 @@
+﻿Subject,Predicate,Object
+me:item_atom_films,schema:alternateName,"""原子影視傳播有限公司"""
+me:item_atom_films,schema:url,<https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do?disj=19D8F5E6C1E0A7CE09CFC6CADDAB9A88&fhl=zh_TW>
+me:item_atom_films,schema:identifier,"""86892661"""
+me:item_atom_films,schema:archivedAt,"""docs/Business_Registration_Atom_Films.pdf"""
+me:item_atom_films,schema:fileFormat,aat:300266022
+me:item_atom_films,rdf:type,aat:300025966
+me:item_atom_films,rdf:type,wd:Q20747045
+me:item_atom_films,schema:creator,me:person_Edward_Yang
+me:item_atom_films,schema:status,"""nullified"""
+me:item_atom_films,schema:datePublished,"""1992-11-17"""
+me:item_atom_films,schema:capital,"""8400000"""
+me:item_atom_films,schema:location,gn:1668284
+me:item_atom_films,schema:about,lcsh:sh2005007658
+me:item_atom_films,schema:about,wd:Q11411984
+me:item_atom_films,schema:about,me:concept_Institutional_Reform
+me:item_atom_films,schema:isBasedOn,me:item_astro_boy

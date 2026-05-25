@@ -1,0 +1,21 @@
+﻿Subject,Predicate,Object
+me:item_yiyi,schema:url,<https://www.festival-cannes.com/en/f/yi-yi-2>
+me:item_yiyi,rdf:type,aat:300263857
+me:item_yiyi,schema:director,me:person_Edward_Yang
+me:item_yiyi,schema:event,wd:Q1089696
+me:item_yiyi,schema:genre,wd:Q11411984
+me:item_yiyi,schema:genre,aat:300417801
+me:item_yiyi,schema:genre,aat:300255278
+me:item_yiyi,schema:award,wd:Q510175
+me:item_yiyi,schema:duration,"""173 minutes"""
+me:item_yiyi,schema:datePublished,"""2000-12-16"""
+me:item_yiyi,schema:inLanguage,wd:Q9192
+me:item_yiyi,schema:inLanguage,wd:Q3239456
+me:item_yiyi,schema:location,gn:1668284
+me:item_yiyi,schema:countryOfOrigin,gn:1861060
+me:item_yiyi,schema:countryOfOrigin,gn:1668284
+me:item_yiyi,schema:productionCompany,me:item_atom_films
+me:item_yiyi,schema:keywords,me:concept_Urban_Life
+me:item_yiyi,dcterms:subject,me:concept_humanism
+me:item_yiyi,dcterms:subject,lcsh:sh85026469
+me:item_yiyi,dcterms:subject,lcsh:sh85036226

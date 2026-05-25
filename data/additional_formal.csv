@@ -1,0 +1,15 @@
+﻿Subject,Predicate,Object
+me:person_Edward_Yang,schema:alternateName,"""楊德昌"""
+me:person_Edward_Yang,schema:alternateName,"""Yang Dechang"""
+me:person_Edward_Yang,schema:hasOccupation,wd:Q2526255
+me:person_Edward_Yang,schema:colleague,me:person_Hou_Hsiao_hsien
+me:person_Edward_Yang,schema:colleague,me:person_Wu_Nien_jen
+me:person_Edward_Yang,schema:alumniOf,me:organization_UF_ECE
+me:person_Edward_Yang,prov:wasInfluencedBy,wd:Q1881523
+me:person_Edward_Yang,prov:wasInfluencedBy,lcsh:sh85111520
+me:organization_Ta_Yu_Publishing,schema:location,gn:1668341
+me:organization_Ta_Yu_Publishing,schema:address,"""108,Taiwan,Taipei City,Wanhua District,Guangzhou St,189/5F"""
+me:concept_humanism,schema:isBasedOn,me:item_analects
+me:person_Edward_Yang,prov:wasInfluencedBy,me:item_analects
+me:item_yiyi,schema:depicts,me:item_taipei_map
+me:item_confucian_confusion,schema:depicts,me:item_taipei_map
