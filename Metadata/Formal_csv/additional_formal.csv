@@ -9,15 +9,6 @@ me:person_Edward_Yang,schema:isBasedOn,wd:Q1881523
 me:person_Edward_Yang,schema:isBasedOn,lcsh:sh85111520
 me:organization_Ta_Yu_Publishing,schema:location,gn:1668341
 me:organization_Ta_Yu_Publishing,schema:address,"""108,Taiwan,Taipei City,Wanhua District,Guangzhou St,189/5F"""
-me:concept_Institutional_Reform,skos:definition,"""the process of reviewing and restructuring state institutions"""
-me:concept_Institutional_Reform,skos:scopeNote,"""specifically denotes the deconstruction of Taiwan's film censorship system and the structural/legal transformation of the film industry during the 1980s."""
-me:concept_Urban_Life,skos:scopeNote,"""specifically refers to the Taipei urban experience as depicted in Edward Yang's films,characterized by the profound socio-economic impacts of globalization and late capitalism"""
-me:concept_urban_modernity,skos:scopeNote,"""interrogates the psychological alienation of individuals and the coldness of architectural spaces within the context of Taipei's rapid urban expansion"""
-me:concept_humanism,skos:definition,"""Humanism is a philosophical stance that emphasizes the individual and social potential and agency of human beings."""
-me:concept_humanism,skos:scopeNote,"""In this project, 'Humanism' specifically highlights Edward Yang's profound concern for individual moral integrity and human dignity."""
-"""Alienation""",skos:scopeNote,"""specifically denotes the profound psychological isolation and emotional detachment experienced by individuals navigating Taipei's rapid capitalist expansion."""
-me:concept_urban_modernity,schema:isRelatedTo,me:concept_humanism
-"""Alienation""",schema:isRelatedTo,me:concept_humanism
 me:concept_humanism,schema:isBasedOn,me:item_analects
 me:person_Edward_Yang,schema:isBasedOn,me:item_analects
 me:item_yiyi,schema:depicts,me:item_taipei_map
