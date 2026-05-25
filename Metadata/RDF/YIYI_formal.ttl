@@ -1,0 +1,58 @@
+@prefix me: <https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+
+me:concept_Urban_Life
+    owl:sameAs lcsh:sh85026255 ;
+    skos:scopeNote """Refers specifically to the metropolitan lifestyle of Taipei's middle class as portrayed in Edward Yang's films, characterized by a striking contrast between material abundance and spiritual emptiness.""" .
+
+me:concept_humanism
+    owl:sameAs wd:Q46158 ;
+    skos:scopeNote """The core philosophical foundation of director Edward Yang's work lies in a profound humanistic concern for individual moral integrity, the dignity of life, and universal humanity, all expressed through a stark and rational audiovisual language.""" ;
+    schema:isBasedOn me:item_analects .
+
+me:item_yiyi
+    schema:url <https://www.festival-cannes.com/en/f/yi-yi-2> ;
+    rdf:type aat:300263857 ;
+    schema:director me:person_Edward_Yang ;
+    schema:event wd:Q1089696 ;
+    schema:genre wd:Q11411984 ;
+    schema:genre aat:300417801 ;
+    schema:genre aat:300255278 ;
+    schema:award wd:Q510175 ;
+    schema:duration "173 minutes" ;
+    schema:datePublished "2000-12-16" ;
+    schema:inLanguage wd:Q9192 ;
+    schema:inLanguage wd:Q3239456 ;
+    schema:location gn:1668284 ;
+    schema:countryOfOrigin gn:1861060 ;
+    schema:countryOfOrigin gn:1668284 ;
+    schema:productionCompany me:item_atom_films ;
+    schema:keywords me:concept_Urban_Life ;
+    dcterms:subject me:concept_humanism ;
+    dcterms:subject lcsh:sh85026469 ;
+    dcterms:subject lcsh:sh85036226 ;
+    schema:depicts me:item_taipei_map .
+
+me:person_Edward_Yang
+    owl:sameAs viaf:32206370 ;
+    schema:alternateName "楊德昌" ;
+    schema:alternateName "Yang Dechang" ;
+    schema:hasOccupation wd:Q2526255 ;
+    schema:colleague me:person_Hou_Hsiao_hsien ;
+    schema:colleague me:person_Wu_Nien_jen ;
+    schema:alumniOf me:organization_UF_ECE ;
+    prov:wasInfluencedBy wd:Q1881523 ;
+    prov:wasInfluencedBy lcsh:sh85111520 ;
+    prov:wasInfluencedBy me:item_analects .
+

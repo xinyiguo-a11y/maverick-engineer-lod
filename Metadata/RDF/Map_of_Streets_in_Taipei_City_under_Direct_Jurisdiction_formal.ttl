@@ -1,0 +1,34 @@
+@prefix me: <https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+
+me:item_taipei_map
+    schema:url <https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&RNO=2004.003.0188#> ;
+    schema:identifier "2004.003.0188" ;
+    rdf:type aat:300266197 ;
+    schema:creator me:organization_Ta_Yu_Publishing ;
+    schema:temporalCoverage "1985" ;
+    schema:locationCreated gn:1668341 ;
+    schema:genre "Post-World War II Thematic Maps" ;
+    schema:material aat:300014173 ;
+    dcterms:subject gn:1668341 ;
+    schema:dateCreated "2013-10-24" ;
+    schema:contributor me:person_Huang_Qingqi .
+
+me:organization_Ta_Yu_Publishing
+    schema:location gn:1668341 ;
+    schema:address "108,Taiwan,Taipei City,Wanhua District,Guangzhou St,189/5F" .
+
+me:person_Huang_Qingqi
+    owl:sameAs viaf:264144928079754341420 .
+

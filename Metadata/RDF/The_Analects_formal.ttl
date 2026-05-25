@@ -1,0 +1,40 @@
+@prefix me: <https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+
+me:item_analects
+    schema:url <https://archive.org/details/theanalectsconfucius/page/n37/mode/2up> ;
+    schema:identifier "ISBN 978-0-698-15351-6" ;
+    schema:identifier ark:/13960/t9d59554c ;
+    rdf:type aat:300451072 ;
+    schema:author viaf:89664672 ;
+    schema:translator me:person_Annping_Chin ;
+    schema:datePublished "2014" ;
+    schema:publisher me:organization_Penguin_Books ;
+    schema:isPartOf "Folkscanomy" ;
+    schema:inLanguage wd:Q1860 ;
+    schema:archivedAt me:organization_Internet_Archive ;
+    schema:instrument "Internet Archive HTML5 Uploader" ;
+    dcterms:available "2020-02-16" ;
+    dcterms:subject lcsh:sh85031069 ;
+    dcterms:subject lcsh:sh85100886 .
+
+me:organization_Internet_Archive
+    owl:sameAs wd:Q461 .
+
+me:organization_Penguin_Books
+    owl:sameAs wd:Q1336200 .
+
+me:person_Annping_Chin
+    owl:sameAs viaf:112077809 .
+

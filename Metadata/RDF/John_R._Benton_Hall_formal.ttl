@@ -1,0 +1,33 @@
+@prefix me: <https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+
+me:item_benton_hall
+    schema:url <https://www.eng.ufl.edu/facilities/hwcoe-buildings-information/hwcoe-building-directory/name/john-r-benton-hall/> ;
+    schema:identifier "721" ;
+    rdf:type "Building" ;
+    schema:location "946 Center Dr.Gainesville FL 32611" ;
+    schema:dateCreated "1967" ;
+    schema:value "4" ;
+    schema:value "67" ;
+    schema:value "25878" ;
+    schema:isPartOf me:organization_UF ;
+    schema:department me:organization_UF_ECE ;
+    dcterms:subject wd:Q1881523 ;
+    dcterms:subject lcsh:sh85111520 ;
+    dcterms:subject wd:Q108605510 ;
+    dcterms:subject lcsh:sh99010179 .
+
+me:organization_UF
+    owl:sameAs wd:Q501758 .
+

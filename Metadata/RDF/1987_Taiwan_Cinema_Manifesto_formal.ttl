@@ -1,0 +1,61 @@
+@prefix me: <https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+
+me:concept_Institutional_Reform
+    owl:sameAs wd:Q11943714 ;
+    skos:scopeNote """Specifically refers to the deconstruction of Taiwan's film censorship system in the 1980s, as well as the structural and legal transformation of the film industry.""" .
+
+me:item_manifesto
+    schema:url <https://www.twreporter.org/a/saturday-features-film-interview-jan-hung-tze> ;
+    schema:alternateName "1987 臺灣電影宣言" ;
+    schema:archivedAt <https://p.udpweb.com/wxm/i/volno/0:104> ;
+    schema:citation <https://search.worldcat.org/zh-cn/title/66161126> ;
+    schema:publisher me:organization_China_Times ;
+    rdf:type aat:300026393 ;
+    schema:spatialCoverage gn:1668284 ;
+    schema:creator me:person_Edward_Yang ;
+    schema:creator me:person_Hou_Hsiao_hsien ;
+    schema:creator me:person_Wu_Nien_jen ;
+    schema:datePublished "1987-02-01" ;
+    schema:publisher me:organization_Wenxin_Magazine ;
+    schema:locationCreated gn:1668284 ;
+    schema:inLanguage wd:Q18130932 ;
+    schema:temporalCoverage "before the end of Martial Law" ;
+    dcterms:subject wd:Q11411984 ;
+    dcterms:subject me:concept_Institutional_Reform .
+
+me:organization_China_Times
+    owl:sameAs wd:Q697429 .
+
+me:organization_Wenxin_Magazine
+    owl:sameAs wd:Q11079943 .
+
+me:person_Edward_Yang
+    owl:sameAs viaf:32206370 ;
+    schema:alternateName "楊德昌" ;
+    schema:alternateName "Yang Dechang" ;
+    schema:hasOccupation wd:Q2526255 ;
+    schema:colleague me:person_Hou_Hsiao_hsien ;
+    schema:colleague me:person_Wu_Nien_jen ;
+    schema:alumniOf me:organization_UF_ECE ;
+    prov:wasInfluencedBy wd:Q1881523 ;
+    prov:wasInfluencedBy lcsh:sh85111520 ;
+    prov:wasInfluencedBy me:item_analects .
+
+me:person_Hou_Hsiao_hsien
+    owl:sameAs viaf:59922938 .
+
+me:person_Wu_Nien_jen
+    owl:sameAs viaf:27278925 .
+

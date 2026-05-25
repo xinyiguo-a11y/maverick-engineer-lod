@@ -1,0 +1,40 @@
+@prefix me: <https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+
+me:concept_humanism
+    owl:sameAs wd:Q46158 ;
+    skos:scopeNote """The core philosophical foundation of director Edward Yang's work lies in a profound humanistic concern for individual moral integrity, the dignity of life, and universal humanity, all expressed through a stark and rational audiovisual language.""" ;
+    schema:isBasedOn me:item_analects .
+
+me:item_astro_boy
+    schema:url <https://tezukaosamu.net/en/anime/5.html> ;
+    rdf:type aat:300411663 ;
+    schema:director me:person_Tezuka_Osamu ;
+    schema:productionCompany me:organization_Tezuka_Productions ;
+    schema:productionCompany me:organization_Mushi_Production ;
+    schema:datePublished "1964-07-26" ;
+    schema:inLanguage wd:Q5287 ;
+    schema:fileFormat "87 minutes; partially in color" ;
+    dcterms:subject lcsh:sh85026469 ;
+    dcterms:subject me:concept_humanism .
+
+me:organization_Mushi_Production
+    owl:sameAs wd:Q1377799 .
+
+me:organization_Tezuka_Productions
+    owl:sameAs wd:Q2090847 .
+
+me:person_Tezuka_Osamu
+    owl:sameAs viaf:40771534 .
+

@@ -1,0 +1,43 @@
+@prefix me: <https://github.com/xinyiguo-a11y/maverick-engineer-lod/tree/main/entities/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix lcsh: <http://id.loc.gov/authorities/subjects/> .
+
+me:item_stage_photo
+    schema:url <https://www.gettyimages.nl/detail/nieuwsfoto%27s/actors-play-a-scene-from-a-sketch-by-director-edward-yang-nieuwsfotos/2254629295?adppopup=true> ;
+    schema:identifier "2254629295" ;
+    rdf:type aat:300386099 ;
+    schema:creator me:person_Mandel_Ngan ;
+    schema:director me:person_Edward_Yang ;
+    schema:datePublished "1997-03-01" ;
+    schema:location wd:Q125935090 ;
+    dcterms:subject lcsh:sh85046445 ;
+    schema:location gn:1819729 ;
+    schema:fileFormat "1024 x 720 px (8,67 x 6,10 cm) - 300 dpi -" ;
+    schema:about me:item_manifesto .
+
+me:person_Edward_Yang
+    owl:sameAs viaf:32206370 ;
+    schema:alternateName "楊德昌" ;
+    schema:alternateName "Yang Dechang" ;
+    schema:hasOccupation wd:Q2526255 ;
+    schema:colleague me:person_Hou_Hsiao_hsien ;
+    schema:colleague me:person_Wu_Nien_jen ;
+    schema:alumniOf me:organization_UF_ECE ;
+    prov:wasInfluencedBy wd:Q1881523 ;
+    prov:wasInfluencedBy lcsh:sh85111520 ;
+    prov:wasInfluencedBy me:item_analects .
+
+me:person_Mandel_Ngan
+    owl:sameAs https://www.instagram.com/mandelngan/ ;
+    owl:sameAs <https://www.instagram.com/mandelngan/> .
+
