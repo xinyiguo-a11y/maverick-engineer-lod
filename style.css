@@ -936,3 +936,81 @@ html {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.rdf-showcase-container {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #fcfcfc;
+}
+
+.rdf-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.rdf-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-family: monospace; /* 凸显代码感 */
+}
+
+.rdf-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.rdf-btn.active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.special-btn {
+    border-color: #0066cc;
+    color: #0066cc;
+}
+
+.special-btn.active {
+    background-color: #0066cc;
+    border-color: #0066cc;
+    color: #fff;
+}
+
+.rdf-table-wrapper {
+    max-height: 400px;
+    overflow-y: auto; /* 数据多时允许滚动 */
+    border: 1px solid #ddd;
+}
+
+.rdf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+}
+
+.rdf-table th, .rdf-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    word-break: break-word;
+}
+
+.rdf-table th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.rdf-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
