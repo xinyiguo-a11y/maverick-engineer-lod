@@ -646,6 +646,38 @@
                 </tbody>
             </table>
         </div>
+        <div class="rdf-showcase-container">
+            <h3>Formalized RDF Triples Viewer</h3>
+            
+            <div class="rdf-buttons-group" id="rdf-buttons">
+                <button class="rdf-btn active" data-file="1987_Taiwan_Cinema_Manifesto_formal.csv">1987 Manifesto</button>
+                <button class="rdf-btn" data-file="A_Confucian_Confusion_formal.csv">A Confucian Confusion</button>
+                <button class="rdf-btn" data-file="YIYI_formal.csv">Yi Yi</button>
+                <button class="rdf-btn" data-file="Atom_Films_formal.csv">Atom Films</button>
+                <button class="rdf-btn" data-file="Astro_Boy_THE_BRAVE_IN_SPACE_formal.csv">Astro Boy</button>
+                <button class="rdf-btn" data-file="The_Analects_formal.csv">The Analects</button>
+                <button class="rdf-btn" data-file="John_R._Benton_Hall_formal.csv">Benton Hall</button>
+                <button class="rdf-btn" data-file="Edward_Yang_Contemporary_Film_Directors_formal.csv">Biography</button>
+                <button class="rdf-btn" data-file="Map_of_Streets_in_Taipei_City_under_Direct_Jurisdiction_formal.csv">Taipei Map</button>
+                <button class="rdf-btn" data-file="Stage_photo_of_Journey_to_the_East_97_Beijing,_Hong_Kong,_Taipei_formal.csv">Stage Photo</button>
+                <button class="rdf-btn special-btn" data-file="additional_formal.csv">Additional Relations</button>
+            </div>
+        
+            <div class="rdf-table-wrapper">
+                <table class="rdf-table" id="rdf-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Predicate</th>
+                            <th>Object</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rdf-table-body">
+                        <tr><td colspan="3" style="text-align: center;">Loading data...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <p class="metadata-description">
             You can download the complete dataset in Turtle (.ttl) format below.
@@ -716,5 +748,91 @@
     <img class="modal-content" id="modal-img">
 </div>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tableBody = document.getElementById('rdf-table-body');
+            const buttons = document.querySelectorAll('.rdf-btn');
+        
+            // 1. 自定义安全的 CSV 解析器（忽略引号内的逗号）
+            function parseCSVLine(line) {
+                let result = [];
+                let current = '';
+                let inQuotes = false;
+                
+                for (let i = 0; i < line.length; i++) {
+                    let char = line[i];
+                    if (char === '"') {
+                        inQuotes = !inQuotes;
+                        current += char; // 保留引号，呈现 RDF 字符串的原貌
+                    } else if (char === ',' && !inQuotes) {
+                        result.push(current.trim());
+                        current = '';
+                    } else {
+                        current += char;
+                    }
+                }
+                result.push(current.trim());
+                return result;
+            }
+        
+            // 2. 核心加载函数
+            function loadCSV(filename) {
+                // 显示加载中
+                tableBody.innerHTML = '<tr><td colspan="3" style="text-align: center;">Loading...</td></tr>';
+                
+                // 拼接路径，调用你 github 仓库的 data 文件夹
+                const filepath = `data/${filename}`;
+                
+                fetch(filepath)
+                    .then(response => {
+                        if (!response.ok) throw new Error("File not found");
+                        return response.text();
+                    })
+                    .then(csvText => {
+                        const lines = csvText.split('\n').filter(line => line.trim() !== '');
+                        tableBody.innerHTML = ''; // 清空加载提示
+                        
+                        // 跳过第一行表头 (Subject, Predicate, Object)，从第二行开始渲染
+                        for (let i = 1; i < lines.length; i++) {
+                            const columns = parseCSVLine(lines[i]);
+                            
+                            // 确保是完整的三元组再渲染
+                            if (columns.length >= 3) {
+                                const tr = document.createElement('tr');
+                                tr.innerHTML = `
+                                    <td style="color: #c41e3a; font-weight: bold;">${columns[0]}</td>
+                                    <td style="color: #0066cc;">${columns[1]}</td>
+                                    <td style="color: #2e8b57;">${columns[2].replace(/</g, "&lt;").replace(/>/g, "&gt;")}</td>
+                                `;
+                                // replace 防止 URL 里的 < > 被浏览器当成 HTML 标签吃掉
+                                tableBody.appendChild(tr);
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        tableBody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: red;">Failed to load data: ${filepath}. Make sure the file exists in the /data folder.</td></tr>`;
+                        console.error("Error loading CSV:", error);
+                    });
+            }
+        
+            // 3. 按钮点击事件绑定
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 切换按钮激活状态
+                    buttons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 获取文件名并加载
+                    const filename = this.getAttribute('data-file');
+                    loadCSV(filename);
+                });
+            });
+        
+            // 4. 页面加载完成后，默认点击第一个按钮展示数据
+            if (buttons.length > 0) {
+                buttons[0].click();
+            }
+        });
+        </script>
 </body>
 </html>
