@@ -102,7 +102,9 @@
                         <orgName>University of Southern California</orgName>
                     </org>
                 </listOrg>
-                
+            </particDesc>
+
+            <settingDesc>    
                 <listPlace>
                     <place xml:id="place_taiwan" sameAs="https://www.geonames.org/1668284">
                         <placeName>Taiwan</placeName>
@@ -125,7 +127,7 @@
                         transition zone explored by Spanish conquistadors in Herzog's film. </note>
                     </place>
                 </listPlace>
-            </particDesc>
+            </settingDesc>  
 
             <textClass>
                 <keywords scheme="http://id.loc.gov/authorities/subjects">
@@ -141,68 +143,67 @@
                     </term>
                 </keywords>
             </textClass>
-        </profileDesc>
-        
-        <sourceDesc>
+
             <listBibl>
                 <head>Films Mentioned in the Text</head>
                 <bibl xml:id="item_expectations" sameAs="https://www.wikidata.org/wiki/Q39072310">
                     <title>Expectations</title>
-                    <date>1982</date>
+                    <date when="1982">1982</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0085626/</idno>
                 </bibl>
                 <bibl xml:id="item_that_day" sameAs="https://www.wikidata.org/wiki/Q3519626">
                     <title>That Day, on the Beach</title>
-                    <date>1983</date>
+                    <date when="1983">1983</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0085635/</idno>
                 </bibl>
                 <bibl xml:id="item_taipei_story" sameAs="https://www.wikidata.org/wiki/Q3514053">
                     <title>Taipei Story</title>
-                    <date>1985</date>
+                    <date when="1985">1985</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0089866/</idno>
                 </bibl>
                 <bibl xml:id="item_terrorizer" sameAs="https://www.wikidata.org/wiki/Q640531">
                     <title>The Terrorizer</title>
-                    <date>1986</date>
+                    <date when="1986">1986</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0091355/</idno>
                 </bibl>
                 <bibl xml:id="item_brighter_summer" sameAs="https://www.wikidata.org/wiki/Q710745">
                     <title>A Brighter Summer Day</title>
-                    <date>1991</date>
+                    <date when="1991">1991</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0101985/</idno>
                 </bibl>
                 <bibl xml:id="item_confucian_confusion" sameAs="https://www.wikidata.org/wiki/Q2992619">
                     <title>A Confucian Confusion</title>
-                    <date>1994</date>
+                    <date when="1994">1994</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0109685/</idno>
                 </bibl>
                 <bibl xml:id="item_mahjong" sameAs="https://www.wikidata.org/wiki/Q3277743">
                     <title>Mahjong</title>
-                    <date>1996</date>
+                    <date when="1996">1996</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0116962/</idno>
                 </bibl>
                 <bibl xml:id="item_yiyi" sameAs="https://www.wikidata.org/wiki/Q704513">
                     <title>Yi Yi</title>
-                    <date>2000</date>
+                    <date when="2000">2000</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0244316/</idno>
                 </bibl>
                 <bibl xml:id="item_aguirre" sameAs="https://www.wikidata.org/wiki/Q325662">
                     <title>Aguirre</title>
-                    <date>1972</date>
+                    <date when="1972">1972</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0068182/</idno>
                 </bibl>
                 <bibl xml:id="item_fitzcarraldo" sameAs="https://www.wikidata.org/wiki/Q698111">
                     <title>Fitzcarraldo</title>
-                    <date>1982</date>
+                    <date when="1982">1982</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0083946/</idno>
                 </bibl>
                 <bibl xml:id="item_nosferatu" sameAs="https://www.wikidata.org/wiki/Q151895">
                     <title>Nosferatu</title>
-                    <date>1979</date>
+                    <date when="1979">1979</date>
                     <idno type="IMDb">https://www.imdb.com/title/tt0079641/</idno>
                 </bibl>
             </listBibl>
-        </sourceDesc>
+        </profileDesc>
+        
     </teiHeader>
 
     <text>
