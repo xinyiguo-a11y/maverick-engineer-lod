@@ -5,7 +5,7 @@
     <teiHeader xml:lang="en">
         <fileDesc>
             <titleStmt>
-                <title><hi rend="italic">Edward Yang: Poetry and Motion</hi>: A Digital TEI Edition</title>
+                <title>Edward Yang: Poetry and Motion: A Digital TEI Edition</title>
                 <author>
                     <persName xml:id="author_anderson" sameAs="https://www.wikidata.org/wiki/Q6219000">
                         <forename>John</forename>
@@ -22,7 +22,7 @@
             </titleStmt>
             
             <publicationStmt>
-                <publisher>Maverick Engineer LOD Project</publisher>
+                <publisher>Maverick Engineer LODLAM Project</publisher>
                 <pubPlace>
                     <placeName key="Bologna" sameAs="https://www.geonames.org/3181928">Bologna, Italy</placeName>
                 </pubPlace>
@@ -48,7 +48,7 @@
 
         <encodingDesc>
             <projectDesc>
-                <p>Created for the "Maverick Engineer" LOD and DH course project.</p>
+                <p>Created for the "Maverick Engineer" LODLAM and DH course project.</p>
             </projectDesc>
             <samplingDecl>
                 <p>This text contains non-contiguous selected paragraphs from Chapter 1 ("Poetry and Motion") 
