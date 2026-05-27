@@ -1,6 +1,6 @@
 ﻿Subject,Predicate,Object
 me:item_manifesto,schema:url,<https://www.twreporter.org/a/saturday-features-film-interview-jan-hung-tze>
-me:item_manifesto,schema:alternateName,"""1987 臺灣電影宣言"""
+me:item_manifesto,schema:alternateName,"1987 臺灣電影宣言"
 me:item_manifesto,schema:archivedAt,<https://p.udpweb.com/wxm/i/volno/0:104>
 me:item_manifesto,schema:citation,<https://search.worldcat.org/zh-cn/title/66161126>
 me:item_manifesto,schema:publisher,me:organization_China_Times
@@ -9,10 +9,10 @@ me:item_manifesto,schema:spatialCoverage,gn:1668284
 me:item_manifesto,schema:creator,me:person_Edward_Yang
 me:item_manifesto,schema:creator,me:person_Hou_Hsiao_hsien
 me:item_manifesto,schema:creator,me:person_Wu_Nien_jen
-me:item_manifesto,schema:datePublished,"""1987-02-01"""
+me:item_manifesto,schema:datePublished,"1987-02-01"
 me:item_manifesto,schema:publisher,me:organization_Wenxin_Magazine
 me:item_manifesto,schema:locationCreated,gn:1668284
 me:item_manifesto,schema:inLanguage,wd:Q18130932
-me:item_manifesto,schema:temporalCoverage,"""before the end of Martial Law"""
+me:item_manifesto,schema:temporalCoverage,"before the end of Martial Law"
 me:item_manifesto,dcterms:subject,wd:Q11411984
 me:item_manifesto,dcterms:subject,me:concept_Institutional_Reform
