@@ -15,7 +15,7 @@
 me:item_benton_hall
     schema:url <https://www.eng.ufl.edu/facilities/hwcoe-buildings-information/hwcoe-building-directory/name/john-r-benton-hall/> ;
     schema:identifier "721" ;
-    rdf:type "Building" ;
+    rdf:type aat:300444406 ;
     schema:location "946 Center Dr.Gainesville FL 32611" ;
     schema:dateCreated "1967" ;
     schema:value "4" ;
