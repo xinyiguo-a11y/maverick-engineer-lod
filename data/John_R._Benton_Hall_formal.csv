@@ -1,12 +1,12 @@
 ﻿Subject,Predicate,Object
 me:item_benton_hall,schema:url,<https://www.eng.ufl.edu/facilities/hwcoe-buildings-information/hwcoe-building-directory/name/john-r-benton-hall/>
-me:item_benton_hall,schema:identifier,"""721"""
-me:item_benton_hall,rdf:type,"""Building"""
-me:item_benton_hall,schema:location,"""946 Center Dr.Gainesville FL 32611"""
-me:item_benton_hall,schema:dateCreated,"""1967"""
-me:item_benton_hall,schema:value,"""4"""
-me:item_benton_hall,schema:value,"""67"""
-me:item_benton_hall,schema:value,"""25878"""
+me:item_benton_hall,schema:identifier,"721"
+me:item_benton_hall,rdf:type,"Building"
+me:item_benton_hall,schema:location,"946 Center Dr.Gainesville FL 32611"
+me:item_benton_hall,schema:dateCreated,"1967"
+me:item_benton_hall,schema:value,"4"
+me:item_benton_hall,schema:value,"67"
+me:item_benton_hall,schema:value,"25878"
 me:item_benton_hall,schema:isPartOf,me:organization_UF
 me:item_benton_hall,schema:department,me:organization_UF_ECE
 me:item_benton_hall,dcterms:subject,wd:Q1881523
