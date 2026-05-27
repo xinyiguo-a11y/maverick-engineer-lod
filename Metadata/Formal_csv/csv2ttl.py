@@ -1,158 +1,111 @@
-import csv
-import json
-import glob
 import os
-import re
-from collections import defaultdict
-
-# ==============================================================================
-# SCRIPT: generate_ttl.py
-# PURPOSE: Aggregates all *_formal.csv files into a single Turtle (.ttl) dataset.
-# FEATURES: 
-#   1. Implements grouped syntax (Subject -> Predicate -> Object list).
-#   2. Automatic data typing (xsd:date, xsd:gYear, xsd:integer).
-#   3. Automatic language tagging (@zh, @en).
-#   4. Robust parsing for complex strings (e.g., SKOS annotations with commas).
-# ==============================================================================
-
-def load_namespaces(json_file):
-    """
-    Load prefixes and URIs from the namespace configuration file.
-    Ensures 'xsd' is present for standard data typing.
-    """
-    namespaces = {"xsd": "http://www.w3.org/2001/XMLSchema#"}
-    
-    if os.path.exists(json_file):
-        with open(json_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            for prefix, uri in data.items():
-                # Clean URIs by removing accidental angle brackets
-                namespaces[prefix] = uri.strip("<>")
-    else:
-        print(f"WARNING: {json_file} not found. Utilizing default namespaces.")
-        
-    return namespaces
-
-def format_object(obj_str):
-    """
-    Processes the Object column to apply proper RDF formatting rules.
-    Identifies URIs, QNames, and Literals (Dates, Integers, and Languages).
-    """
-    obj_str = obj_str.strip()
-    
-    # Rule 1: Handle URIs wrapped in angle brackets
-    if obj_str.startswith('<') and obj_str.endswith('>'):
-        return obj_str
-        
-    # Rule 2: Handle QNames (e.g., me:entity, schema:name)
-    # Ensure it is not a literal string starting with quotes
-    if ':' in obj_str and not (obj_str.startswith('"') or obj_str.startswith("'")):
-        return obj_str
-        
-    # Rule 3: Process Literals (initially wrapped in triple or double quotes)
-    # Strip all surrounding quote markers to extract the raw value
-    val = obj_str.strip('"\'').strip()
-    
-    # A. Date Pattern (YYYY-MM-DD) -> xsd:date
-    if re.match(r'^\d{4}-\d{2}-\d{2}$', val):
-        return f'"{val}"^^xsd:date'
-        
-    # B. Year Pattern (YYYY) -> xsd:gYear
-    if re.match(r'^\d{4}$', val):
-        return f'"{val}"^^xsd:gYear'
-        
-    # C. Integer Pattern -> xsd:integer
-    if re.match(r'^\d+$', val):
-        return f'"{val}"^^xsd:integer'
-        
-    # D. Language Tagging: Chinese characters detected -> @zh
-    if re.search(r'[\u4e00-\u9FFF]', val):
-        return f'"{val}"@zh'
-        
-    # E. Language Tagging: Latin characters detected -> @en
-    if re.search(r'[a-zA-Z]', val):
-        return f'"{val}"@en'
-        
-    # Fallback: Default quoted literal
-    return f'"{val}"'
+import glob
+import json
+import csv
+from rdflib import Graph, URIRef, Literal, Namespace
+from rdflib.namespace import RDFS, OWL
 
 def main():
-    output_file = "Edward_Yang_Final_Dataset.ttl"
-    config_file = "namespace.json"
+    print("开始构建文化遗产知识图谱...")
     
-    print("--------------------------------------------------")
-    print("INITIALIZING RDF CONVERSION PROCESS...")
-    print("--------------------------------------------------")
+    # 1. 初始化 RDF 图
+    g = Graph()
     
-    # 1. Load Namespace Configuration
-    prefixes = load_namespaces(config_file)
-    
-    # 2. Discover all relevant CSV files
-    csv_files = glob.glob('*_formal.csv')
-    if not csv_files:
-        print("ERROR: No files matching '*_formal.csv' were found.")
-        return
+    # 2. 加载并绑定 Namespaces (命名空间)
+    namespaces = {}
+    print("正在加载命名空间 namespace.json ...")
+    with open('namespace.json', 'r', encoding='utf-8') as f:
+        ns_dict = json.load(f)
         
-    print(f"Discovered {len(csv_files)} formal CSV files. Proceeding with aggregation.")
+    for prefix, uri in ns_dict.items():
+        # 清除部分URI可能带有的尖括号（例如 "<http://vocab.getty.edu/aat/>"）
+        clean_uri = uri.strip('<>')
+        ns = Namespace(clean_uri)
+        namespaces[prefix] = ns
+        g.bind(prefix, ns)
+
+    # 定义一个辅助函数，用于将CSV中的字符串正确解析为 RDF 节点 (URIRef 或 Literal)
+    def resolve_term(term_str):
+        term_str = term_str.strip()
+        if not term_str:
+            return None
+            
+        # 如果是完整的URI (被 <> 包裹)
+        if term_str.startswith('<') and term_str.endswith('>'):
+            return URIRef(term_str[1:-1])
+            
+        # 如果是字面量 Literal (被引号包裹)
+        elif term_str.startswith('"'):
+            # 剥离多重或单重引号 (例如 """1987-02-01""")
+            clean_str = term_str.strip('"')
+            return Literal(clean_str)
+            
+        # 如果是带有前缀的缩写 (例如 me:item_manifesto)
+        elif ':' in term_str:
+            prefix, name = term_str.split(':', 1)
+            if prefix in namespaces:
+                return namespaces[prefix][name]
+            else:
+                # 如果前缀未定义，退化为完整的 URIRef (容错处理)
+                return URIRef(term_str)
+                
+        # 兜底情况：作为纯文本字面量处理
+        else:
+            return Literal(term_str)
+
+    # 3. 处理实体映射 (entity_mapping.json)
+    print("正在融合实体映射 entity_mapping.json ...")
+    with open('entity_mapping.json', 'r', encoding='utf-8') as f:
+        entities_data = json.load(f)
+        
+    # 遍历 JSON 中的所有大类（如 'items', 'entities', 'concepts' 等）
+    for category, mapping_dict in entities_data.items():
+        for label, mapping in mapping_dict.items():
+            # 应对结构差异：'items' 是纯字符串，其他是字典包含 local 和 global
+            if isinstance(mapping, str):
+                local_id = mapping
+                global_id = ""
+            else:
+                local_id = mapping.get('local', '')
+                global_id = mapping.get('global', '')
+                
+            if local_id:
+                subject_node = resolve_term(local_id)
+                # 为实体添加人类可读的标签 (rdfs:label)
+                g.add((subject_node, RDFS.label, Literal(label)))
+                
+                # 如果同时存在全局标识符（如 viaf, wd），添加 owl:sameAs 对齐实体
+                if global_id:
+                    object_node = resolve_term(global_id)
+                    g.add((subject_node, OWL.sameAs, object_node))
+
+    # 4. 自动抓取并处理所有 CSV 文件
+    csv_files = glob.glob('*.csv')
+    print(f"找到 {len(csv_files)} 个 CSV 文件，准备解析...")
     
-    # 3. Aggregate data into memory to support grouped syntax
-    # Structure: graph[subject][predicate] = set(objects)
-    graph = defaultdict(lambda: defaultdict(set))
-    triple_count = 0
-    
-    for file_path in csv_files:
-        with open(file_path, 'r', encoding='utf-8-sig') as f:
+    for file in csv_files:
+        print(f"  - 正在解析: {file}")
+        with open(file, 'r', encoding='utf-8') as f:
             reader = csv.reader(f)
-            next(reader, None) # Skip header row
+            # 跳过表头 (Subject, Predicate, Object)
+            header = next(reader, None) 
             
             for row in reader:
-                # Basic validation: row must contain at least Subject, Predicate, and Object
                 if len(row) >= 3:
-                    subj = row[0].strip()
-                    pred = row[1].strip()
+                    s_str, p_str, o_str = row[0], row[1], row[2]
                     
-                    # Join row elements from index 2 onwards to handle commas inside quoted strings
-                    # This is critical for skos:definition and skos:scopeNote
-                    raw_obj = ",".join(row[2:]).strip()
+                    s = resolve_term(s_str)
+                    p = resolve_term(p_str)
+                    o = resolve_term(o_str)
                     
-                    formatted_obj = format_object(raw_obj)
-                    graph[subj][pred].add(formatted_obj)
-                    triple_count += 1
-                    
-        print(f"Loaded: {file_path}")
+                    if s and p and o:
+                        g.add((s, p, o))
 
-    # 4. Generate the Turtle output
-    with open(output_file, 'w', encoding='utf-8') as f:
-        # Write Prefix Declarations
-        f.write("### NAMESPACE DECLARATIONS ###\n")
-        for pref, uri in sorted(prefixes.items()):
-            f.write(f"@prefix {pref}: <{uri}> .\n")
-        f.write("\n")
-        
-        f.write("### KNOWLEDGE GRAPH DATA ###\n\n")
-        
-        # Write Triple Groups
-        for subj in sorted(graph.keys()):
-            f.write(f"{subj}")
-            
-            predicates = sorted(graph[subj].keys())
-            for i, pred in enumerate(predicates):
-                # Sort objects for deterministic output
-                objs = sorted(list(graph[subj][pred]))
-                objs_joined = " , ".join(objs)
-                
-                if i == 0:
-                    f.write(f" {pred} {objs_joined}")
-                else:
-                    f.write(f" ;\n    {pred} {objs_joined}")
-            
-            # End the subject block with a period
-            f.write(" .\n\n")
-            
-    print("--------------------------------------------------")
-    print(f"CONVERSION COMPLETE: Processed {triple_count} triples.")
-    print(f"OUTPUT SAVED AS: {output_file}")
-    print("--------------------------------------------------")
+    # 5. 序列化导出为 Turtle 格式 (.ttl)
+    output_filename = "cultural_heritage_graph.ttl"
+    print(f"数据处理完毕，正在导出至 {output_filename} ...")
+    g.serialize(destination=output_filename, format='turtle')
+    print("成功！Turtle文件已生成。")
 
 if __name__ == "__main__":
     main()
