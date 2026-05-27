@@ -7,8 +7,8 @@ me:item_yiyi,schema:genre,wd:Q11411984
 me:item_yiyi,schema:genre,aat:300417801
 me:item_yiyi,schema:genre,aat:300255278
 me:item_yiyi,schema:award,wd:Q510175
-me:item_yiyi,schema:duration,"""173 minutes"""
-me:item_yiyi,schema:datePublished,"""2000-12-16"""
+me:item_yiyi,schema:duration,"173 minutes"
+me:item_yiyi,schema:datePublished,"2000-12-16"
 me:item_yiyi,schema:inLanguage,wd:Q9192
 me:item_yiyi,schema:inLanguage,wd:Q3239456
 me:item_yiyi,schema:location,gn:1668284
