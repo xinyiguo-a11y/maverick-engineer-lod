@@ -1,12 +1,12 @@
 ﻿Subject,Predicate,Object
 me:item_taipei_map,schema:url,<https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&RNO=2004.003.0188#>
-me:item_taipei_map,schema:identifier,"""2004.003.0188"""
+me:item_taipei_map,schema:identifier,"2004.003.0188"
 me:item_taipei_map,rdf:type,aat:300266197
 me:item_taipei_map,schema:creator,me:organization_Ta_Yu_Publishing
-me:item_taipei_map,schema:temporalCoverage,"""1985"""
+me:item_taipei_map,schema:temporalCoverage,"1985"
 me:item_taipei_map,schema:locationCreated,gn:1668341
-me:item_taipei_map,schema:genre,"""Post-World War II Thematic Maps"""
+me:item_taipei_map,schema:genre,"Post-World War II Thematic Maps"
 me:item_taipei_map,schema:material,aat:300014173
 me:item_taipei_map,dcterms:subject,gn:1668341
-me:item_taipei_map,schema:dateCreated,"""2013-10-24"""
+me:item_taipei_map,schema:dateCreated,"2013-10-24"
 me:item_taipei_map,schema:contributor,me:person_Huang_Qingqi
