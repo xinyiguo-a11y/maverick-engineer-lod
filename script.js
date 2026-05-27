@@ -59,7 +59,7 @@ const itemsData = {
         category: "Organization",
         desc: "An independent production entity founded by Edward Yang in 1992. This entity served as the operational core during his 'Independent Exploration' period.",
         img: "images/item2_big.jpg",
-        sourceUrl: "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do?disj=19D8F5E6C1E0A7CE09CFC6CADDAB9A88&fhl=zh_TW",
+        sourceUrl: "https://github.com/xinyiguo-a11y/maverick-engineer-lod/blob/main/data/Business_Registration_Atom_Films.pdf",
         csvFile: "data/Atom Films.csv"
     },
     3: {
