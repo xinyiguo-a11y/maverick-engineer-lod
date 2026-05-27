@@ -1,6 +1,6 @@
 ﻿Subject,Predicate,Object
 me:item_confucian_confusion,schema:url,<https://www.imdb.com/title/tt0109685/>
-me:item_confucian_confusion,schema:identifier,"""tt0109685"""
+me:item_confucian_confusion,schema:identifier,"tt0109685"
 me:item_confucian_confusion,rdf:type,aat:300263857
 me:item_confucian_confusion,schema:director,me:person_Edward_Yang
 me:item_confucian_confusion,schema:genre,lcsh:sh85014576
@@ -15,7 +15,7 @@ me:item_confucian_confusion,dcterms:subject,me:concept_alienation
 me:item_confucian_confusion,schema:location,gn:1668284
 me:item_confucian_confusion,schema:inLanguage,wd:Q9192
 me:item_confucian_confusion,schema:inLanguage,wd:Q3239456
-me:item_confucian_confusion,schema:datePublished,"""1994"""
+me:item_confucian_confusion,schema:datePublished,"1994"
 me:item_confucian_confusion,schema:productionCompany,me:item_atom_films
-me:item_confucian_confusion,schema:fileFormat,1.85:1; 35 mm; 125 min
+me:item_confucian_confusion,schema:fileFormat,"1.85:1; 35 mm; 125 min"
 me:item_confucian_confusion,schema:isBasedOn,me:item_analects
